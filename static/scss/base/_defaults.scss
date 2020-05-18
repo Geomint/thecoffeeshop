@@ -1,0 +1,20 @@
+// base styles
+body {
+    background: $main-background-color;
+}
+
+a {
+    color: $primary-color;
+    transition: $fast-transition;
+
+    &:hover {
+        color: lighten($primary-color, 20%);
+        text-decoration: none;
+    }
+}
+
+// overwrite default styles
+ul,ol,li {
+    margin: 0;
+    padding: 0;
+}
