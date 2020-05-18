@@ -4,3 +4,4 @@ __pycache__
 env.py
 .vscode
 /static/css/index.min.css.map
+/.ds_store
