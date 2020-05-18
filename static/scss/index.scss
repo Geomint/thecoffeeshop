@@ -1,3 +1,8 @@
-.home {
-    color: black;
-}
+// import base sass files
+@import 'base/variables';
+@import 'base/defaults';
+
+// import components sass files
+@import 'components/header';
+@import 'components/footer';
+
