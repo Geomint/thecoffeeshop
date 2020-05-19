@@ -1,0 +1,35 @@
+// button styles
+.btn {
+    padding: 10px 20px;
+    border-radius: $default-border-radius;
+    transition: $fast-transition;
+
+    &:hover {
+        transform: scale(0.95);
+    }
+
+    &--primary {
+        background: $primary-color;
+        color: $white-color;
+
+        &:hover {
+            background: darken($primary-color, 10%);
+            color: darken($white-color, 10%);
+        }
+    }
+
+    &--secondary {
+        background: $secondary-color;
+        color: $white-color;
+    }
+
+    &--no-inner {
+        border: 1px solid $primary-color;
+        color: $white-color;
+
+        &:hover {
+            border: 1px solid $white-color;
+            color: darken($white-color, 10%);
+        }
+    }
+}
