@@ -1,3 +1,4 @@
+// header styles
 .main-nav {
     display: flex;
     justify-content: center;
@@ -6,11 +7,11 @@
     box-shadow: $panel-shadow;
 
     &__logo {
-       img {
-           max-width: 80%;
-           margin: auto;
-           display: block;
-       }
+        img {
+            max-width: 80%;
+            margin: auto;
+            display: block;
+        }
     }
 
     &__nav {
@@ -35,6 +36,7 @@
 
             &__item {
                 padding: 0 8px;
+
                 i {
                     font-size: 1.5rem;
                 }
