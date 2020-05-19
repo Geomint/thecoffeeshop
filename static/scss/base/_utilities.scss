@@ -1,0 +1,5 @@
+.xs-hide {
+    @include breakpoint(xs) {
+        display: none;
+    }
+}
