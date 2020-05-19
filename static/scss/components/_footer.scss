@@ -1,0 +1,28 @@
+// footer styles
+.footer {
+    background: $secondary-color;
+
+    &__nav {
+        padding: 20px;
+
+        &__group {
+
+            &__list {
+                list-style: none;
+
+                &__item {
+                    padding: 2px 0px;
+                }
+            }
+        }
+    }
+    &__message {
+        color: $white-color;
+        text-align: center;
+        text-shadow: $text-shadow;
+
+        img {
+            max-width: 40%;
+        }
+    }
+}
