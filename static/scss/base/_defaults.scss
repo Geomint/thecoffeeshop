@@ -3,6 +3,11 @@ body {
     background: $main-background-color;
 }
 
+.main-body {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 a {
     color: $primary-color;
     transition: $fast-transition;
@@ -14,7 +19,9 @@ a {
 }
 
 // overwrite default styles
-ul,ol,li {
+ul,
+ol,
+li {
     margin: 0;
     padding: 0;
 }
