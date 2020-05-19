@@ -1,9 +1,12 @@
 // import base sass files
+@import 'base/fonts';
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/defaults';
+@import 'base/utilities';
 
 // import components sass files
 @import 'components/header';
 @import 'components/footer';
-
+@import 'components/banners/top-banner';
+@import 'components/buttons/buttons';
