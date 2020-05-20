@@ -1,0 +1,45 @@
+.products {
+    text-align: center;
+    display: flex;
+
+    @include breakpoint(xs) {
+        margin-bottom: 15px;
+    }
+
+
+    &__main-link {
+        text-decoration: none;
+        color: $black-color;
+
+        &:hover {
+            color: $black-color;
+            h3 {
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__wrapper {
+        border-radius: $default-border-radius;
+        box-shadow: $panel-shadow;
+
+        &__image {
+            >img {border-radius: $default-border-radius;}
+        }
+
+        &__title {
+            transition: $fast-transition;
+            background: $secondary-color;
+            color: $white-color;
+            padding: 10px;
+            text-shadow: $text-shadow;
+        }
+
+        &__content {
+            &__text {
+                padding: 10px;
+            }
+        }
+    }
+
+}
