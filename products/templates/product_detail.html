@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %} The Coffee Shop | Product Page {% endblock %}
+
+{% block content %}
+<section class="row">
+    {% for p in product %}
+    <div class="col-md-4 col-sm-6 col-12 flex">
+        <div class="products">
+            <div class="products__wrapper">
+                <a class="products__main-link" href="/">
+                    <div class="products__wrapper__image">
+                        <img class="img-responsive" src="/static/{{p.image}}" alt="{{p.name}}">
+                    </div>
+                    <h3 class="products__wrapper__title">{{p.name}}</h3>
+                </a>
+                <div class="products__wrapper__content">
+                    <div class="products__wrapper__content__text">
+                        <p>{{p.grind_size}}</p>
+                        <p>{{p.description}}</p>
+                    </div>
+                    <div class="products__wrapper__content__price">
+                        <p>From: {{p.price}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+{% endblock %}
