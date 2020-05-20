@@ -8,14 +8,15 @@
 
     &__logo {
         img {
-            max-width: 80%;
-            margin: auto;
+            width: 40%;
             display: block;
+            padding: 20px 10px;
         }
     }
 
     &__nav {
-        margin-right: auto;
+        margin-left: auto;
+        padding-right: 30px;
 
         @include breakpoint(xs) {
             display: none;
