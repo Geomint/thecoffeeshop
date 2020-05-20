@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} The Coffee Shop | Register Account Page {% endblock %}
+
+{% block content %}
+<section class="row">
+    <div class="col-12">
+        <h1>Register an account</h1>
+    </div>
+</section>
+
+<section class="row">
+    <div class="col-12">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert">
+                    <p>{{ message }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>
+
+<section class="row">
+    <div class="col-12">
+        <form method="POST">
+            <p class="hidden">{{ csrf_token }}</p>
+            {{ form.username }}
+            {{ form.email }}
+            {{ form.password1 }}
+            {{ form.password2 }}
+        </form>
+    </div>
+</section>
+{% endblock %}
