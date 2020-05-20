@@ -17,9 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from pages.views import index
 from products import urls as urls_products
+from accounts import urls as urls_accounts
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', index, name="Home Page"),
+    url(r'^$', index, name="home"),
     url(r'products/', include(urls_products)),
+    url(r'accounts/', include(urls_accounts)),
 ]
