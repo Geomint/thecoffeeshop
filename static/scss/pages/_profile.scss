@@ -1,0 +1,71 @@
+// profile page styles
+.profile {
+    &__message {
+
+        &__user {
+            text-transform: capitalize;
+        }
+    }
+
+    &__navigation {
+        padding: 20px 0;
+
+        &__list {
+            list-style: none;
+
+            a {
+                &:hover {
+                    li {
+                        background: $secondary-color;
+                        color: $white-color;
+                    }
+                }
+            }
+
+            &__item {
+                background: $main-panel-color;
+                border-radius: $default-border-radius;
+                border-bottom: 4px solid $white-color;
+                padding: 12px;
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    &__dashboard {
+        padding: 20px;
+        background: $main-panel-color;
+        border-radius: $default-border-radius;
+
+        &__title {
+            padding: 10px 0;
+        }
+
+        &__orders {
+            display: none;
+        }
+
+        &__product {
+            display: none;
+        }
+
+        &__group {
+            display: flex;
+            padding: 10px 0;
+        }
+
+        &__account {
+            &__username {
+                text-transform: capitalize;
+                padding-left: 10px;
+            }
+
+            &__email {
+                padding-left: 10px;
+            }
+        }
+    }
+}
