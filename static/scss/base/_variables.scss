@@ -3,12 +3,15 @@ $primary-color: #1fa4e5; // primary - carolina blue
 $secondary-color: #535353; // secondary - davy's grey
 $tertiary-color: #5C6D70; // tertiary - cadet
 $white-color: #ffffff; // white
+$off-white-color: #f2f2f2; // off-white
 $black-color: #000; // black
+$required-color: #ff0000; // required-red
 
 // layout-colours 
 $main-nav-color: $secondary-color;
 $main-footer-color: $secondary-color;
 $main-background-color: $white-color;
+$main-panel-color: darken($off-white-color, 5%);
 
 // shadows
 $panel-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
