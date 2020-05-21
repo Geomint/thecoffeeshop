@@ -1,11 +1,36 @@
 {% extends 'base.html' %}
 
-{% block title %} The Coffee Shop | Logout Page {% endblock %}
+{% block title %} The Coffee Shop | Log Out {% endblock %}
 
 {% block content %}
-<section class="row">
-    <div class="col-12">
-        <h1>Logout</h1>
-    </div>
-</section>
+<div class="container">
+    <section class="row">
+        <div class="col-12">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert">
+                <p>{{ message }}</p>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-12">
+            <div class="logout">
+                <div class="logout__logo">
+                    <a href="/">
+                        <img src="/static/images/logo/coffee-shop-logo.png" alt="The Coffee Shop Logo">
+                    </a>
+                </div>
+                <div class="logout__message">
+                    <h3>You were logged out!</h3>
+                    <p>Feel free to continue browsing The Coffee Shop, or alternativley log back in <a
+                            href="/accounts/login">here.</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock %}
