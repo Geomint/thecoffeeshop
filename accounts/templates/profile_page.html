@@ -3,9 +3,64 @@
 {% block title %} The Coffee Shop | Profile Page Page {% endblock %}
 
 {% block content %}
-<section class="row">
-    <div class="col-12">
-        <h1>Welcome back, user</h1>
-    </div>
-</section>
+<div class="container">
+    <section class="row">
+        <div class="col-12">
+            <h2>Welcome back, <span class="profile__message__user">{{user.username}}.</span></h2>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-4">
+            <div class="profile__navigation">
+                <ul class="profile__navigation__list">
+                    <a class="profile__navigation__link__account" href="#">
+                        <li class="profile__navigation__list__item"><i class="fas fa-fw fa-user"></i>My Account</li>
+                    </a>
+                    <a class="profile__navigation__link__orders" href="#">
+                        <li class="profile__navigation__list__item"><i class="fas fa-fw fa-shopping-basket"></i>My
+                            Orders</li>
+                    </a>
+                    <a href="#">
+                        <li class="profile__navigation__list__item"><i class="fas fa-fw fa-sign-out-alt"></i>Log Out
+                        </li>
+                    </a>
+                    <!-- if flagged as staff or admin -->
+                    <a class="profile__navigation__link__product-upload" href="#">
+                        <li class="profile__navigation__list__item"><i class="fas fa-fw fa-upload"></i>Upload Product
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-8 profile__dashboard__account">
+            <h1 class="profile__dashboard__title">Your Account</h1>
+            <div class="profile__dashboard">
+                <div class="profile__dashboard__group">
+                    <p>Your Username:</p>
+                    <p class="profile__dashboard__account__username">{{user.username}}</p>
+                </div>
+                <div class="profile__dashboard__group">
+                    <p>Your Email:</p>
+                    <p class="profile__dashboard__account__email">{{user.email}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 profile__dashboard__orders">
+            <h1 class="profile__dashboard__title">Your Orders</h1>
+            <div class="profile__dashboard">
+                <p>DISPLAY ORDERS HERE IF ANY</p>
+            </div>
+        </div>
+
+        <div class="col-md-8 profile__dashboard__product">
+            <h1 class="profile__dashboard__title">Upload A Product</h1>
+            <div class="profile__dashboard">
+                <p>Product Upload Form here</p>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock %}
