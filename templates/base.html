@@ -2,19 +2,23 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        {% include 'components/head.html' %}
-        <title>{% block title %}{% endblock %}</title>
-    </head>
+
+<head>
+    {% include 'components/head.html' %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
 <body>
     {% include 'components/header.html' %}
-    {% include 'components/banners/top-banner.html' %}
-    <main class="main-body">
-        <div class="container">
+    {% if page_title == 'Home Page' %}
+    <main>
+        {% else %}
+        <main class="main-body">
+            {% endif %}
             {% block content %}{% endblock %}
-        </div>
-    </main>
-    {% include 'components/footer.html' %}
-    {% include 'components/scripts.html' %}
+        </main>
+        {% include 'components/footer.html' %}
+        {% include 'components/scripts.html' %}
 </body>
+
 </html>
