@@ -1,0 +1,42 @@
+// styles for forms
+.form {
+    margin: auto;
+    display: block;
+    max-width: 50%;
+    background: $main-panel-color;
+    padding: 20px;
+    border-radius: $default-border-radius;
+    box-shadow: $panel-shadow;
+
+    &__group {
+        color: $black-color;
+        padding: 10px 0;
+
+        &__label {
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            border-radius: $default-border-radius;
+            border: none;
+            height: 40px;
+        }
+    }
+
+    &__required {
+        color: $required-color;
+        padding-left: 2px;
+    }
+
+    &__submit {
+        margin: auto;
+        display: block;
+        margin-top: 10px;
+    }
+
+    &__bottom-message {
+        text-align: center;
+        padding-top: 20px;
+    }
+}
