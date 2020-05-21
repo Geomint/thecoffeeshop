@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
-
-{% block title %} The Coffee Shop | Home Page {% endblock %}
-
+{% block title %} The Coffee Shop | {{page_title}} {% endblock %}
 {% block content %}
-<section class="row">
-    <div class="col-12">
-        <h1>Hello world!</h1>
-    </div>
-</section>
+{% include 'components/banners/top-banner.html' %}
+<div class="container">
+    <section class="row">
+        <div class="col-12">
+            <h1>Hello world!</h1>
+        </div>
+    </section>
+</div>
 {% endblock %}
