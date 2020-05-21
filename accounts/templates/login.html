@@ -3,9 +3,53 @@
 {% block title %} The Coffee Shop | Login Page {% endblock %}
 
 {% block content %}
-<section class="row">
-    <div class="col-12">
-        <h1>Login</h1>
-    </div>
-</section>
+<div class="container">
+    <section class="row">
+        <div class="col-12">
+            <h1 class="page__heading">Login Here</h1>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-12">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert">
+                <p>{{ message }}</p>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-12">
+            <form class="form" method="POST">
+                <p class="hidden">{{ csrf_token }}</p>
+                <div class="form__group">
+                    <label class="form__group__label" for="username">Username<span
+                            class="form__required">*</span></label>
+                    {{ form.username }}
+                </div>
+                <div class="form__group">
+                    <label class="form__group__label" for="email">Email<span class="form__required">*</span></label>
+                    {{ form.email }}
+                </div>
+                <div class="form__group">
+                    <label class="form__group__label" for="password">Password<span
+                            class="form__required">*</span></label>
+                    {{ form.password1 }}
+                </div>
+                <div class="form__group">
+                    <label class="form__group__label" for="repeat-password">Repeat Password<span
+                            class="form__required">*</span></label>
+                    {{ form.password2 }}
+                </div>
+                <button class="form__submit btn btn--primary" type="submit">Register Account</button>
+                <p class="form__bottom-message">If you already have an account with us, sign in <a
+                        href="/accounts/login">Here</a></p>
+            </form>
+        </div>
+    </section>
+</div>
 {% endblock %}
