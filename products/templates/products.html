@@ -3,30 +3,32 @@
 {% block title %} The Coffee Shop | All Products {% endblock %}
 
 {% block content %}
-<section class="row">
-    {% for product in products %}
-    <div class="col-md-4 col-sm-6 col-12 flex">
-        <div class="products">
-            <div class="products__wrapper">
-                <a class="products__main-link" href="{{ product.get_absolute_url }}">
-                    <div class="products__wrapper__image">
-                        <img class="img-responsive" src="/static/{{product.image}}" alt="{{product.name}}">
-                    </div>
-                    <h3 class="products__wrapper__title">{{product.name}}</h3>
-                </a>
-                <div class="products__wrapper__content">
-                    <div class="products__wrapper__content__text">
-                        <p>{{product.grind_size}}</p>
-                        <p>{{product.description}}</p>
-                    </div>
-                    <div class="products__wrapper__content__price">
-                        <p>From: {{product.price}}</p>
+<div class="container">
+    <section class="row">
+        {% for product in products %}
+        <div class="col-md-4 col-sm-6 col-12 flex">
+            <div class="products">
+                <div class="products__wrapper">
+                    <a class="products__main-link" href="{{ product.get_absolute_url }}">
+                        <div class="products__wrapper__image">
+                            <img class="img-responsive" src="/static/{{product.image}}" alt="{{product.name}}">
+                        </div>
+                        <h3 class="products__wrapper__title">{{product.name}}</h3>
+                    </a>
+                    <div class="products__wrapper__content">
+                        <div class="products__wrapper__content__text">
+                            <p>{{product.grind_size}}</p>
+                            <p>{{product.description}}</p>
+                        </div>
+                        <div class="products__wrapper__content__price">
+                            <p>From: {{product.price}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    {% endfor %}
-</section>
+        {% endfor %}
+    </section>
+</div>
 
 {% endblock %}
