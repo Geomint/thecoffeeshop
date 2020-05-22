@@ -32,5 +32,18 @@ class RegisterNewUserForm(UserCreationForm):
         return password2
 
 class LoginUserForm(forms.Form):
+    """
+    Form to allow user to login to their account
+    """
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
+
+class UpdateUserDetailsForm(forms.Form):
+    """
+    Form to allow user to update details
+    """
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'first_name', 'last_name']

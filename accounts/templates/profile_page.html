@@ -47,6 +47,11 @@
                     <p>Your Email:</p>
                     <p class="profile__dashboard__account__email">{{user.email}}</p>
                 </div>
+
+                <form action="">
+                    {% csrf_token %}
+                    {{ update_form }}
+                </form>
             </div>
         </div>
 
