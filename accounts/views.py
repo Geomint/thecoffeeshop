@@ -65,4 +65,4 @@ def account_profile_view(request):
             return redirect('profile')
     else: 
         update_form = UpdateUserDetailsForm()
-    return render(request, 'profile_page.html', {"profile": user})
+    return render(request, 'profile_page.html', {"profile": user}, {"update_form": update_form})

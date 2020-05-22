@@ -38,7 +38,7 @@ class LoginUserForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
 
-class UpdateUserDetailsForm(forms.Form):
+class UpdateUserDetailsForm(forms.ModelForm):
     """
     Form to allow user to update details
     """
