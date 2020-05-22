@@ -26,10 +26,12 @@
                         </li>
                     </a>
                     <!-- if flagged as staff or admin -->
-                    <a class="profile__navigation__link__product-upload" href="#">
-                        <li class="profile__navigation__list__item"><i class="fas fa-fw fa-upload"></i>Upload Product
-                        </li>
-                    </a>
+                    {% if user.is_staff %}
+                        <a class="profile__navigation__link__product-upload" href="#">
+                            <li class="profile__navigation__list__item"><i class="fas fa-fw fa-upload"></i>Upload Product
+                            </li>
+                        </a>
+                    {% endif %}
                 </ul>
             </div>
         </div>
