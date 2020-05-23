@@ -6,12 +6,12 @@
 <div class="container">
     <section class="row">
         <div class="col-12">
-            <h2>Welcome back, <span class="profile__message__user">{{user.username}}.</span></h2>
+            <h2 class="page__heading">Welcome back, <span class="profile__message__user">{{user.username}}.</span></h2>
         </div>
     </section>
 
     <section class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 col-12">
             <div class="profile__navigation">
                 <ul class="profile__navigation__list">
                     <a class="profile__navigation__link__account" href="#">
@@ -28,7 +28,7 @@
                     <!-- if flagged as staff or admin -->
                     {% if user.is_staff %}
                         <a class="profile__navigation__link__product-upload" href="#">
-                            <li class="profile__navigation__list__item"><i class="fas fa-fw fa-upload"></i>Upload Product
+                            <li class="profile__navigation__list__item"><i class="fas fa-fw fa-upload"></i>Upload a Product
                             </li>
                         </a>
                     {% endif %}
@@ -36,13 +36,14 @@
             </div>
         </div>
 
-        <div class="col-md-8 profile__dashboard__account">
+        <div class="col-md-8 col-12 profile__dashboard__account">
             <h1 class="profile__dashboard__title">Your Account</h1>
             <div class="profile__dashboard">
                 
                 <div class="profile__dashboard__edit">
-                    <p>Edit your account details</p>
+                    <h5>Edit your account details</h5>
                     <a class="edit-profile-trigger" href="#"><i class="fas fa-edit"></i></a>
+                    <a class="profile__dashboard__edit__close edit-profile-close" href="#"><i class="profile__dashboard__close fas fa-window-close"></i></a>
                 </div>
          
 
@@ -57,38 +58,38 @@
                     </div>
                     <div class="profile__dashboard__group">
                         <p>Your Email:</p>
-                        <p class="profile__dashboard__account__email">{{user.email}}</p>
+                        <p class="profile__dashboard__account__value">{{user.email}}</p>
                         <div class="profile__dashboard__group__input">
                             {{ update_form.email }}
                         </div>
                     </div>
                     <div class="profile__dashboard__group">
                         <p>Your First Name:</p>
-                        <p class="profile__dashboard__account__email">{{user.first_name}}</p>
+                        <p class="profile__dashboard__account__value">{{user.first_name}}</p>
                         <div class="profile__dashboard__group__input">
                             {{ update_form.first_name }}
                         </div>
                     </div>
                     <div class="profile__dashboard__group">
                         <p>Your Last Name:</p>
-                        <p class="profile__dashboard__account__email">{{user.last_name}}</p>
+                        <p class="profile__dashboard__account__value">{{user.last_name}}</p>
                         <div class="profile__dashboard__group__input">
                             {{ update_form.last_name }}
                         </div>
                     </div>
-                    <button class="btn btn--primary" type="submit">Edit Details</button>
+                    <button class="profile__dashboard__group__submit btn btn--primary" type="submit">Edit Details</button>
                 </form>
             </div>
         </div>
 
-        <div class="col-md-8 profile__dashboard__orders">
+        <div class="col-md-8 col-12 profile__dashboard__orders">
             <h1 class="profile__dashboard__title">Your Orders</h1>
             <div class="profile__dashboard">
                 <p>DISPLAY ORDERS HERE IF ANY</p>
             </div>
         </div>
 
-        <div class="col-md-8 profile__dashboard__product">
+        <div class="col-md-8 col-12 profile__dashboard__product">
             <h1 class="profile__dashboard__title">Upload A Product</h1>
             <div class="profile__dashboard">
                 <p>Product Upload Form here</p>
