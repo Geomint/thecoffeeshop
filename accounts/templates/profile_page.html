@@ -39,18 +39,44 @@
         <div class="col-md-8 profile__dashboard__account">
             <h1 class="profile__dashboard__title">Your Account</h1>
             <div class="profile__dashboard">
-                <div class="profile__dashboard__group">
-                    <p>Your Username:</p>
-                    <p class="profile__dashboard__account__username">{{user.username}}</p>
+                
+                <div class="profile__dashboard__edit">
+                    <p>Edit your account details</p>
+                    <a class="edit-profile-trigger" href="#"><i class="fas fa-edit"></i></a>
                 </div>
-                <div class="profile__dashboard__group">
-                    <p>Your Email:</p>
-                    <p class="profile__dashboard__account__email">{{user.email}}</p>
-                </div>
+         
 
-                <form action="">
+                <form id="edit-details-form" class="profile__dashboard__edit__form" action="">
                     {% csrf_token %}
-                    {{ update_form }}
+                    <div class="profile__dashboard__group">
+                        <p>Your Username:</p>
+                        <p class="profile__dashboard__account__username">{{user.username}}</p>
+                        <div class="profile__dashboard__group__input">
+                            {{ update_form.username }}
+                        </div>
+                    </div>
+                    <div class="profile__dashboard__group">
+                        <p>Your Email:</p>
+                        <p class="profile__dashboard__account__email">{{user.email}}</p>
+                        <div class="profile__dashboard__group__input">
+                            {{ update_form.email }}
+                        </div>
+                    </div>
+                    <div class="profile__dashboard__group">
+                        <p>Your First Name:</p>
+                        <p class="profile__dashboard__account__email">{{user.first_name}}</p>
+                        <div class="profile__dashboard__group__input">
+                            {{ update_form.first_name }}
+                        </div>
+                    </div>
+                    <div class="profile__dashboard__group">
+                        <p>Your Last Name:</p>
+                        <p class="profile__dashboard__account__email">{{user.last_name}}</p>
+                        <div class="profile__dashboard__group__input">
+                            {{ update_form.last_name }}
+                        </div>
+                    </div>
+                    <button class="btn btn--primary" type="submit">Edit Details</button>
                 </form>
             </div>
         </div>
