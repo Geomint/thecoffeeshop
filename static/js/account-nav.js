@@ -10,16 +10,20 @@ accountNavButton.on('click', function(){
     accountPanel.show();
     ordersPanel.hide();
     productPanel.hide();
-})
+});
 
 orderNavButton.on('click', function(){
     accountPanel.hide();
     ordersPanel.show();
     productPanel.hide();
-})
+});
 
 productNavButton.on('click', function(){
     accountPanel.hide();
     ordersPanel.hide();
     productPanel.show();
+});
+
+$('.edit-profile-trigger').on('click', function(){
+    $('#edit-details-form').addClass('profile__dashboard__edit__form__show');
 })
