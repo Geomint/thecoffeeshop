@@ -46,7 +46,7 @@
                 </div>
          
 
-                <form id="edit-details-form" class="profile__dashboard__edit__form" action="">
+                <form method="POST" id="edit-details-form" class="profile__dashboard__edit__form" action="{% url 'profile' %}">
                     {% csrf_token %}
                     <div class="profile__dashboard__group">
                         <p>Your Username:</p>
