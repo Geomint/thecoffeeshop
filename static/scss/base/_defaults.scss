@@ -33,5 +33,10 @@ p {
 
     &__heading {
         padding-bottom: 30px;
+        
+        @include breakpoint(sm) {
+            padding-bottom: 5px;
+            text-align: center;
+        }
     }
 }
