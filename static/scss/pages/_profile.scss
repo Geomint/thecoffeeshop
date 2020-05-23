@@ -42,6 +42,10 @@
 
         &__title {
             padding: 10px 0;
+
+            @include breakpoint(md) {
+                text-align: center;
+            }
         }
 
         &__orders {
@@ -55,16 +59,54 @@
         &__group {
             display: flex;
             padding: 10px 0;
+            margin-bottom: 3px;
+
+            @include breakpoint(md) {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+                display: block;
+                padding: 20px 0;
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+            }
+
+            &__input {
+                margin-left: auto;
+
+                @include breakpoint(md) {
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &__submit {
+                margin-left: auto;
+
+                @include breakpoint(md) {
+                    margin: auto;
+                }
+            }
+
         }
 
         &__account {
             &__username {
                 text-transform: capitalize;
-                padding-left: 10px;
+                padding-left: 5px;
+
+                @include breakpoint(md) {
+                    padding: 10px 0;
+                }
             }
 
-            &__email {
-                padding-left: 10px;
+            &__value {
+                padding-left: 5px;
+
+                @include breakpoint(md) {
+                    padding: 10px 0;
+                }
             }
         }
 
@@ -73,6 +115,7 @@
 
             i {
                 padding-left: 5px;
+                font-size: 20px;
             }
 
             &__form {
@@ -91,6 +134,14 @@
                     }
                 }
             }
+
+            &__close {
+                display: none;
+            }
+        }
+
+        &__close {
+            color: $required-color;
         }
     }
 }
