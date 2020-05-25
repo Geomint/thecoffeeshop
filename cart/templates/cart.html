@@ -23,10 +23,10 @@
                         Product excerpt will go here. Product excerpt will go here.</p>
                     <p class="cart__item__contents__price">£{{p.product.price}}</p>
                     <h5>In the cart: {{ p.quantity }}</h5>
-                    <form method="POST" class="cart__item__update-form">
+                    <form method="POST" class="cart__item__update-form" action="{% url 'adjustcart' p.id %}">
                         {% csrf_token %}
                         <div class="cart__item__update-form__group">   
-                            <input type="number" min="0" max="999" value="{{p.quantity}}">
+                            <input name="quantity" type="number" min="0" max="999" value="{{p.quantity}}">
                             <button class="btn btn--primary" type="submit">Edit Quantity</button>
                         </div>
                     </form>
