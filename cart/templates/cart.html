@@ -9,23 +9,31 @@
             <h1>Your Shopping Cart</h1>
         </div>
     </section>
-    <section class="row">
-        <div class="cart">
+    <section class="row cart-row">
             {% for p in cart_items %}
-            <div class="col-12">
+            <div class="col-md-3">
                 <div class="cart__item">
-                    <img class="cart__item__thumbnail" src="/static/{{p.product.image}}" alt="{{product.name}}">
-                    <div class="cart__item__contents">
-                        <h3>{{p.product.name}}</h3>
-                        <p>Product excerpt will go here. Product excerpt will go here. Product excerpt will go here.
-                            Product excerpt will go here. Product excerpt will go here.</p>
-                        <p class="cart__item__contents__price">£{{p.product.price}}</p>
-                    </div>
-                    
+                    <img class="cart__item__thumbnail img-responsive" src="/static/{{p.product.image}}" alt="{{product.name}}">
                 </div>
             </div>
+            <div class="col-md-9">
+                <div class="cart__item__contents">
+                    <h3>{{p.product.name}}</h3>
+                    <p>Product excerpt will go here. Product excerpt will go here. Product excerpt will go here.
+                        Product excerpt will go here. Product excerpt will go here.</p>
+                    <p class="cart__item__contents__price">£{{p.product.price}}</p>
+                    <h5>In the cart: {{ p.quantity }}</h5>
+                    <form method="POST" class="cart__item__update-form">
+                        {% csrf_token %}
+                        <div class="cart__item__update-form__group">   
+                            <input type="number" min="0" max="999" value="{{p.quantity}}">
+                            <button class="btn btn--primary" type="submit">Edit Quantity</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
             {% endfor %}
-        </div>
 
     </section>
 </div>
