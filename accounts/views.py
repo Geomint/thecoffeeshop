@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .forms import RegisterNewUserForm, LoginUserForm, UpdateUserDetailsForm
+from .forms import RegisterNewUserForm, LoginUserForm, UpdateUserDetailsForm, UploadProductForm
 
 # Create your views here.
 
@@ -57,12 +57,23 @@ def account_profile_view(request):
     """
     user = User.objects.get(email=request.user.email)
     if request.method == 'POST':
-        update_form = UpdateUserDetailsForm(request.POST, instance=request.user)
+        update_form = UpdateUserDetailsForm(request.POST, instance=request.user, prefix='banned')
         if update_form.is_valid():
             update_form.save()
             messages.success(
                 request, 'You have successfully updated your account details.')
             return redirect('profile')
     else: 
-        update_form = UpdateUserDetailsForm(instance=request.user)
-    return render(request, 'profile_page.html', {"profile": user, "update_form": update_form})
+        update_form = UpdateUserDetailsForm(instance=request.user, prefix='banned')
+    
+    if request.method == 'POST' and not update_form.is_valid():
+        product_upload_form = UploadProductForm(request.POST, prefix='expected')
+        update_form = UpdateUserDetailsForm(prefix='banned')
+        if product_upload_form.is_valid():
+            product_upload_form.save()
+            messages.success(request, 'You have successfully uploaded a product to the DataBase')
+            return redirect('profile')
+    else: 
+        product_upload_form = UploadProductForm(prefix='expected')
+
+    return render(request, 'profile_page.html', {"profile": user, "update_form": update_form, "product_upload_form": product_upload_form})
