@@ -1,0 +1,31 @@
+// styles for cart
+
+.cart {
+    &__item {
+        display: flex;
+        box-shadow: $panel-shadow;
+        margin-top: 10px;
+        border-radius: $default-border-radius;
+
+        &__thumbnail {
+            max-width: 20%;
+
+            img {
+                border-radius: $default-border-radius;
+            }
+        }
+        
+        &__contents {
+            padding: 2vh;
+
+            p {
+                padding: 5px 0;
+            }
+
+            &__price {
+                color: $success-color;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
