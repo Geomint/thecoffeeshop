@@ -1,2 +1,22 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% block title %} The Coffee Shop | Your Shopping Cart {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <section class="row">
+            <div class="col-12">
+                <h1>Your Shopping Cart</h1>
+            </div>
+        </section>
+        <section class="row">
+            {% for product in cart_item %}
+            <div class="col-12">
+                <div>
+                    {{product.product.name}}
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+    </div>
+{% endblock %}
