@@ -17,8 +17,8 @@
         <ul class="main-nav__icon-nav__list">
             <li class="main-nav__icon-nav__list__item main-nav__icon-nav__list__item__burger-nav"><a href="/"><i class="fas fa-bars"></i></a></li>
             <li class="main-nav__icon-nav__list__item main-nav__icon-nav__list__item__search"><a href="/"><i class="fas fa-search"></i></a></li>
-            <li class="main-nav__icon-nav__list__item"><a href="/"><i class="fas fa-user"></i></a></li>
-            <li class="main-nav__icon-nav__list__item"><a href="/"><i class="fas fa-shopping-basket"></i></a></li>
+            <li class="main-nav__icon-nav__list__item"><a href="{% url 'profile' %}"><i class="fas fa-user"></i></a></li>
+            <li class="main-nav__icon-nav__list__item"><a href="{% url 'cart' %}"><i class="fas fa-shopping-basket"></i></a></li>
         </ul>
     </div>
 </nav>
