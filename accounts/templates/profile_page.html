@@ -11,6 +11,18 @@
     </section>
 
     <section class="row">
+        <div class="col-12">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert">
+                <p>{{ message }}</p>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+
+    <section class="row">
         <div class="col-md-4 col-12">
             <div class="profile__navigation">
                 <ul class="profile__navigation__list">
@@ -35,7 +47,7 @@
                 </ul>
             </div>
         </div>
-
+        <!-- account panel -->
         <div class="col-md-8 col-12 profile__dashboard__account">
             <h1 class="profile__dashboard__title">Your Account</h1>
             <div class="profile__dashboard">
@@ -81,18 +93,46 @@
                 </form>
             </div>
         </div>
-
+        <!-- orders panel -->
         <div class="col-md-8 col-12 profile__dashboard__orders">
             <h1 class="profile__dashboard__title">Your Orders</h1>
             <div class="profile__dashboard">
                 <p>DISPLAY ORDERS HERE IF ANY</p>
             </div>
         </div>
-
+        <!-- product upload panel -->
         <div class="col-md-8 col-12 profile__dashboard__product">
             <h1 class="profile__dashboard__title">Upload A Product</h1>
             <div class="profile__dashboard">
-                <p>Product Upload Form here</p>
+                <form class="profile__dashboard__product__form" method="POST" action="{% url 'profile' %}">
+                    {% csrf_token %}
+                    <div class="profile__dashboard__group__product">
+                        <label for="name">Product Name</label>
+                        {{product_upload_form.name}}
+                    </div>
+
+                    <div class="profile__dashboard__group__product">
+                        <label for="grind-size">Grind Size</label>
+                        {{product_upload_form.grind_size}}
+                    </div>
+
+                    <div class="profile__dashboard__group__product">
+                        <label for="description">Description</label>
+                        {{product_upload_form.description}}
+                    </div>
+
+                    <div class="profile__dashboard__group__product">
+                        <label for="name">Image</label>
+                        {{product_upload_form.image}}
+                    </div>
+
+                    <div class="profile__dashboard__group__product">
+                        <label for="name">Price</label>
+                        {{product_upload_form.price}}
+                    </div>
+
+                    <button class="profile__dashboard__group__product__submit btn btn--primary" type="submit">Upload Product</button>
+                </form>
             </div>
         </div>
     </section>
