@@ -6,17 +6,17 @@
 <div class="product">
     <div class="container">
         <section class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-12">
                 <div class="product__image">
                     <img class="img-responsive" src="/static/{{product.image}}" alt="{{product.name}}">
                 </div>  
             </div>
-            <div class="col-md-6 align align--center">
+            <div class="col-md-6 col-sm-12 align align--center">
                 <div class="product__content">
                     <h1 class="product__content__title">{{product.name}}</h1>
-                    <p class="product__content__text">Grind Size: {{product.grind_size}}</p>
-                    <p class="product__content__text">Description: {{product.description}}</p>
-                    <p class="product__content__price">£{{product.price}}</p>
+                    <p class="product__content__grind"><span class="product__content__header">Grind Size: </span>{{product.grind_size}}<span class="product__content__info"><i class="fa fa-info"></i></span></p>
+                    <p class="product__content__description"><span class="product__content__header">Description: </span>{{product.description}}</p>
+                    <p class="product__content__price"><span class="product__content__price__rrp">RRP: £100</span>£{{product.price}}</p>
 
                     <a class="btn btn--primary" href="/">Add To Cart</a>
                 </div>
