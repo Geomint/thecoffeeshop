@@ -17,3 +17,10 @@
 .hidden {
     display: none;
 }
+
+.align {
+display: flex;
+    &--center {
+        align-items: center;
+    }
+}
