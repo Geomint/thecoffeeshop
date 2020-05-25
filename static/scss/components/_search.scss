@@ -1,0 +1,27 @@
+// styles for search bar
+
+.search {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: $primary-color;
+    width: 60%;
+
+    &__form {
+       
+        &__input {
+        
+        }
+
+        &__button {
+
+        }
+    }
+
+    &__hide {
+        display: none;
+    }
+}
