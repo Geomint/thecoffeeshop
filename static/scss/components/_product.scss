@@ -1,1 +1,17 @@
 // product page styles
+
+.product {
+
+    &__image {
+        border-radius: $default-border-radius;
+        box-shadow: $panel-shadow;
+
+        img {
+            border-radius: $default-border-radius;
+        }
+    }
+
+    &__content {
+        vertical-align: middle;
+    }
+}
