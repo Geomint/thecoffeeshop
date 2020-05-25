@@ -18,7 +18,13 @@
                     <p class="product__content__description"><span class="product__content__header">Description: </span>{{product.description}}</p>
                     <p class="product__content__price"><span class="product__content__price__rrp">RRP: £100</span>£{{product.price}}</p>
 
-                    <a class="btn btn--primary" href="/">Add To Cart</a>
+                    <form method="POST" action="{% url 'addtocart' product.id %}">
+                        {% csrf_token %}
+                        <div class="">
+                            <input type="number" name="quantity" min="1" max ="10" placeholder="Qauntity">
+                            <button class="btn btn--primary" type="submit">Add To Cart</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
