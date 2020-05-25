@@ -3,20 +3,30 @@
 {% block title %} The Coffee Shop | Your Shopping Cart {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <section class="row">
+<div class="container">
+    <section class="row">
+        <div class="col-12">
+            <h1>Your Shopping Cart</h1>
+        </div>
+    </section>
+    <section class="row">
+        <div class="cart">
+            {% for p in cart_items %}
             <div class="col-12">
-                <h1>Your Shopping Cart</h1>
-            </div>
-        </section>
-        <section class="row">
-            {% for product in cart_item %}
-            <div class="col-12">
-                <div>
-                    {{product.product.name}}
+                <div class="cart__item">
+                    <img class="cart__item__thumbnail" src="/static/{{p.product.image}}" alt="{{product.name}}">
+                    <div class="cart__item__contents">
+                        <h3>{{p.product.name}}</h3>
+                        <p>Product excerpt will go here. Product excerpt will go here. Product excerpt will go here.
+                            Product excerpt will go here. Product excerpt will go here.</p>
+                        <p class="cart__item__contents__price">£{{p.product.price}}</p>
+                    </div>
+                    
                 </div>
             </div>
             {% endfor %}
-        </section>
-    </div>
+        </div>
+
+    </section>
+</div>
 {% endblock %}
