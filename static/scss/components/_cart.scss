@@ -3,12 +3,9 @@
 .cart {
 
     &-row {
-        border-bottom: 1px solid rgba(0,0,0,0.25);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
         padding-bottom: 20px;
-
-        &:last-of-type {
-            border-bottom: none;
-        }
+        margin-bottom: 30px;
     }
 
     &__item {
@@ -19,7 +16,7 @@
         &__thumbnail {
             border-radius: $default-border-radius;
         }
-        
+
         &__contents {
             padding: 2vh;
 
@@ -35,8 +32,13 @@
 
         &__update-form {
 
-            &__group {
-            }
+            &__group {}
         }
+    }
+
+    &__total {
+        font-size: 1.3rem;
+        padding-bottom: 10px;
+        color: $success-color;
     }
 }
