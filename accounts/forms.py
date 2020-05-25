@@ -1,7 +1,9 @@
 from django import forms
 from django.contrib.auth.models import User
+from products.models import Product
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
+
 
 class RegisterNewUserForm(UserCreationForm):
     """
@@ -12,7 +14,7 @@ class RegisterNewUserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
-    
+
     def clean_email(self):
         email = self.cleaned_data.get('email')
         username = self.cleaned_data.get('username')
@@ -31,12 +33,14 @@ class RegisterNewUserForm(UserCreationForm):
             raise ValidationError("Passwords must match")
         return password2
 
+
 class LoginUserForm(forms.Form):
     """
     Form to allow user to login to their account
     """
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
+
 
 class UpdateUserDetailsForm(forms.ModelForm):
     """
@@ -47,3 +51,12 @@ class UpdateUserDetailsForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'first_name', 'last_name']
+
+
+class UploadProductForm(forms.ModelForm):
+    """
+    Form to allow staff or admin to upload new products into DB
+    """
+    class Meta:
+        model = Product
+        fields = ['name', 'grind_size', 'description', 'image', 'price']
