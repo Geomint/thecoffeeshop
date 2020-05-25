@@ -9,32 +9,45 @@
             <h1>Your Shopping Cart</h1>
         </div>
     </section>
+    {% for p in cart_items %}
     <section class="row cart-row">
-            {% for p in cart_items %}
-            <div class="col-md-3">
-                <div class="cart__item">
-                    <img class="cart__item__thumbnail img-responsive" src="/static/{{p.product.image}}" alt="{{product.name}}">
-                </div>
+        <div class="col-md-3">
+            <div class="cart__item">
+                <img class="cart__item__thumbnail img-responsive" src="/static/{{p.product.image}}"
+                    alt="{{product.name}}">
             </div>
-            <div class="col-md-9">
-                <div class="cart__item__contents">
-                    <h3>{{p.product.name}}</h3>
-                    <p>Product excerpt will go here. Product excerpt will go here. Product excerpt will go here.
-                        Product excerpt will go here. Product excerpt will go here.</p>
-                    <p class="cart__item__contents__price">£{{p.product.price}}</p>
-                    <h5>In the cart: {{ p.quantity }}</h5>
-                    <form method="POST" class="cart__item__update-form" action="{% url 'adjustcart' p.id %}">
-                        {% csrf_token %}
-                        <div class="cart__item__update-form__group">   
-                            <input name="quantity" type="number" min="0" max="999" value="{{p.quantity}}">
-                            <button class="btn btn--primary" type="submit">Edit Quantity</button>
-                        </div>
-                    </form>
-                </div>
-                
+        </div>
+        <div class="col-md-9">
+            <div class="cart__item__contents">
+                <h3>{{p.product.name}}</h3>
+                <p>Product excerpt will go here. Product excerpt will go here. Product excerpt will go here.
+                    Product excerpt will go here. Product excerpt will go here.</p>
+                <p class="cart__item__contents__price">£{{p.product.price}}</p>
+                <h5>In the cart: {{ p.quantity }}</h5>
+                <form method="POST" class="cart__item__update-form" action="{% url 'adjustcart' p.id %}">
+                    {% csrf_token %}
+                    <div class="cart__item__update-form__group">
+                        <input name="quantity" type="number" min="0" max="999" value="{{p.quantity}}">
+                        <button class="btn btn--primary" type="submit">Edit Quantity</button>
+                    </div>
+                </form>
             </div>
-            {% endfor %}
-
+        </div>
     </section>
+    {% endfor %}
+
+    <section class="row">
+        <div class="col-md-6 align align--center">
+            <div class="cart__extras">
+                <p>Are you missing some items? make sure to double check <a href="/">in the shop</a> before placing your order!</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h4>Your Cart Total:</h4>
+            <p class="cart__total">£{{ total }}</p>
+            <a class="btn btn--primary" href="">Checkout</a>
+        </div>
+    </section>
+
 </div>
 {% endblock %}
