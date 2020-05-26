@@ -10,11 +10,11 @@
 
     &--primary {
         background: $primary-color;
-        color: $white-color;
+        color: $black-color;
 
         &:hover {
             background: darken($primary-color, 10%);
-            color: darken($white-color, 10%);
+            color: lighten($black-color, 10%);
         }
     }
 
