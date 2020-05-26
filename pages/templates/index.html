@@ -4,26 +4,22 @@
 {% include 'components/banners/top-banner.html' %}
 <div class="home">
     <div class="container">
+        <!-- title -->
         <section class="row">
             <div class="col-12">
                 <h1 class="home__title">The Coffee Shop</h1>
             </div>
         </section>
 
-        <section class="row">
-            <div class="home__latest-products">
-                {% for product in products %}
-                    {{product.name}}
-                {% endfor %}
-            </div>
-        </section>
-
+        <!-- home-info 1 -->
         <section class="row home__layout">
             <div class="col-md-7 align align--center">
                 <div class="home__welcome">
                     <h2 class="home__welcome__title">Discover Our Range</h2>
-                    <p class="home__welcome__text">Browse through our online shop to discover the excellent array of coffee options available to you,
-                        if you need help selecting the perfect blend for you, you can always reach out to us and of our baristas will be in touch.
+                    <p class="home__welcome__text">Browse through our online shop to discover the excellent array of
+                        coffee options available to you,
+                        if you need help selecting the perfect blend for you, you can always reach out to us and of our
+                        baristas will be in touch.
                     </p>
                 </div>
             </div>
@@ -32,6 +28,7 @@
             </div>
         </section>
 
+        <!-- home-info 2 -->
         <section class="row home__layout">
             <div class="col-md-5">
                 <img class="img-responsive" src="/static/images/home/barista.png" alt="Coffee barista">
@@ -39,7 +36,8 @@
             <div class="col-md-7 align align--center">
                 <div class="home__welcome">
                     <h2 class="home__welcome__title">We Love Coffee</h2>
-                    <p class="home__welcome__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At fuga accusamus quibusdam minus.
+                    <p class="home__welcome__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At fuga
+                        accusamus quibusdam minus.
                         Officiis
                         nesciunt sunt ea minus minima perferendis quas veniam est, velit aperiam similique iste! Quae,
                         velit! Doloremque!</p>
@@ -47,6 +45,30 @@
             </div>
         </section>
 
+        <!-- latest products -->
+        <section class="row home__layout">
+            <div class="col-md-12">
+                <h2 class="home__latest-products__title">Latest products</h2>
+            </div>
+            <div class="col-12">
+                <div class="home__latest-products__slick">
+                    {% for product in products %}
+                    <div class="home__latest-products__slick__slide">
+                        <a href="{% url 'view_product_detail' product.id %}">
+                            <img class="img-responsive" src="/static/{{product.image}}" alt="{{product.name}}">
+                            <div class="home__latest-products__slick__slide__content">
+                                <p class="home__latest-products__slick__slide__content__text">{{ product.name }}</p>
+                                <p class="home__latest-products__slick__slide__content__price">£{{ product.price }}</p>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </section>
+
+        <!-- panel call to action -->
         <section class="row">
             <div class="col-md-4 col-12">
                 <div class="home__promo">
