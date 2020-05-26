@@ -4,13 +4,27 @@
 {% include 'components/banners/top-banner.html' %}
 <div class="home">
     <div class="container">
-        <!-- title -->
+        <!-- introduction -->
         <section class="row">
             <div class="col-12">
-                <h1 class="home__title">The Coffee Shop</h1>
+                <div class="home__intro">
+                    <h1 class="home__intro__title">The Coffee Shop</h1>
+                    <p class="home__intro__quote">"Everyone should believe in something. I believe I will have another
+                        coffee."</p>
+                </div>
+
             </div>
         </section>
+    </div>
 
+    <div class="strip-banner">
+        <div class="strip-banner__content">
+            <h3>Browse our Coffee Shop and find the perfect blend for you.</h3>
+            <a class="btn btn--primary" href="/products">Shop Now</a>
+        </div>
+    </div>
+
+    <div class="container">
         <!-- home-info 1 -->
         <section class="row home__layout">
             <div class="col-md-7 align align--center">
@@ -27,7 +41,9 @@
                 <img class="img-responsive" src="/static/images/home/coffee-image-1.png" alt="Coffee beans on a board">
             </div>
         </section>
+    </div>
 
+    <div class="container">
         <!-- home-info 2 -->
         <section class="row home__layout">
             <div class="col-md-5">
@@ -36,15 +52,30 @@
             <div class="col-md-7 align align--center">
                 <div class="home__welcome">
                     <h2 class="home__welcome__title">We Love Coffee</h2>
-                    <p class="home__welcome__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At fuga
-                        accusamus quibusdam minus.
-                        Officiis
-                        nesciunt sunt ea minus minima perferendis quas veniam est, velit aperiam similique iste! Quae,
-                        velit! Doloremque!</p>
+                    <p class="home__welcome__text">Coffee is an extremely important part of our lives, and we think it
+                        should be part of yours too!
+                        Speak to one of our coffee experts to not only find out the amazing benefits but also find a
+                        blend that is perfect for your taste.
+                    </p>
                 </div>
             </div>
         </section>
+    </div>
 
+    <div class="strip-banner">
+        <div class="strip-banner__content">
+            <div class="container">
+                <section class="row">
+                    <div class="col-12">
+                        <h3>Listen to the experts</h3>
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/LkBOAvzWNfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
         <!-- latest products -->
         <section class="row home__layout">
             <div class="col-md-12">
@@ -58,7 +89,8 @@
                             <img class="img-responsive" src="/static/{{product.image}}" alt="{{product.name}}">
                             <div class="home__latest-products__slick__slide__content">
                                 <p class="home__latest-products__slick__slide__content__text">{{ product.name }}</p>
-                                <p class="home__latest-products__slick__slide__content__price">£{{ product.price }}</p>
+                                <p class="home__latest-products__slick__slide__content__price">£{{ product.price }}
+                                </p>
                             </div>
                         </a>
                     </div>
@@ -67,8 +99,9 @@
 
             </div>
         </section>
+    </div>
 
-        <!-- panel call to action -->
+    <!-- <div class="container">
         <section class="row">
             <div class="col-md-4 col-12">
                 <div class="home__promo">
@@ -89,6 +122,14 @@
                 </div>
             </div>
         </section>
+    </div> -->
+
+    <div class="strip-banner">
+        <div class="strip-banner__content">
+            <h3>Still unsure about what coffee to purchase?</h3>
+            <a class="btn btn--primary" href="{% url 'contact' %}">Get In Touch</a>
+        </div>
     </div>
+
 </div>
 {% endblock %}
