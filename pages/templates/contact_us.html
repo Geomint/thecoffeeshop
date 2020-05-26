@@ -4,7 +4,28 @@
 <div class="container">
     <section class="row">
         <div class="col-12">
-            <h1>Contact Us</h1>
+            <h1 class="page__heading">Contact Us</h1>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-sm-12">
+            <form method="POST" class="form" action="{% url 'send' %}">
+                {% csrf_token %}
+                <div class="form__group">
+                    <label class="form__group__label" for="name">Name<span class="form__required">*</span></label>
+                    {{contact_form.name}}
+                </div>
+                <div class="form__group">
+                    <label class="form__group__label" for="email">Email<span class="form__required">*</span></label>
+                    {{contact_form.email}}
+                </div>
+                <div class="form__group">
+                    <label class="form__group__label" for="message">Message<span class="form__required">*</span></label>
+                    {{contact_form.message}}
+                </div>
+                <button class="form__submit btn btn--primary" type="submit">Send Message</button>
+            </form>
         </div>
     </section>
 </div>
