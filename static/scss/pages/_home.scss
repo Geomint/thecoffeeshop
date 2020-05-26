@@ -1,7 +1,7 @@
 // home-page stlyes
 
 .home {
-    padding: 30px 0;
+    padding-top: 30px;
 
     &__layout {
         padding: 30px 0;
@@ -11,9 +11,19 @@
         background: $secondary-color;
     }
 
-    &__title {
+    &__intro {
         text-align: center;
         padding-bottom: 15px;
+
+        &__title {
+            padding-bottom: 5px;
+            font-size: 4rem;
+        }
+
+        &__quote {
+            font-style: italic;
+            font-size: 1.3rem;
+        }
     }
 
     &__promo {
