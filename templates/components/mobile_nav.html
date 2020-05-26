@@ -19,10 +19,13 @@
                             Us</a></li>
                     <li class="mobile-nav__panel__list__item"><a href="/"><i class="fas fa-phone"></i>Contact Us</a>
                     </li>
-                    <li class="mobile-nav__panel__list__item"><a href="/"><i class="fas fa-user"></i>Profile</a></li>
-                    <li class="mobile-nav__panel__list__item"><a href="/"><i class="fas fa-sign-out-alt"></i>Sign Out</a></li>
-                    <li class="mobile-nav__panel__list__item"><a href="/"><i class="fas fa-user"></i>Register</a></li>
-                    <li class="mobile-nav__panel__list__item"><a href="/"><i class="fas fa-sign-in-alt"></i>Sign In</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="mobile-nav__panel__list__item"><a href="{% url 'profile' %}"><i class="fas fa-user"></i>Profile</a></li>
+                    <li class="mobile-nav__panel__list__item"><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Sign Out</a></li>
+                    {%  else %}
+                    <li class="mobile-nav__panel__list__item"><a href="{% url 'register' %}"><i class="fas fa-user"></i>Register</a></li>
+                    <li class="mobile-nav__panel__list__item"><a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i>Sign In</a></li>
+                    {% endif %}
                 </ul>
             </div>
             <div class="mobile-nav__panel__inner__bottom">
