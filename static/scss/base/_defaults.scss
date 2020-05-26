@@ -37,10 +37,10 @@ p {
 
     &__heading {
         padding-bottom: 30px;
+        text-align: center;
         
         @include breakpoint(sm) {
             padding-bottom: 5px;
-            text-align: center;
         }
     }
 }
