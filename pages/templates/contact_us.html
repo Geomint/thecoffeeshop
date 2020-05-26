@@ -9,6 +9,18 @@
     </section>
 
     <section class="row">
+        <div class="col-12">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert">
+                <p>{{ message }}</p>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+    
+    <section class="row">
         <div class="col-sm-12">
             <form method="POST" class="form" action="{% url 'send' %}">
                 {% csrf_token %}
