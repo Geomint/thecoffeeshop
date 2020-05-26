@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from products.models import Product
 
 # Create your views here.
 
@@ -7,8 +8,9 @@ def index(request):
     """
     Returns the index.html home page
     """
+    products = Product.objects.all()
     page_title = 'Home Page'
-    return render(request, "index.html", {'page_title': page_title})
+    return render(request, "index.html", {'page_title': page_title, "products": products})
 
 
 def about_view(request):
