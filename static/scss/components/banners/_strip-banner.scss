@@ -1,0 +1,18 @@
+// styles for strip banner
+
+.strip-banner {
+    background-image: url('/static/images/banners/texture-background.png');
+    padding: 20px;
+    box-shadow: $panel-shadow;
+    background-position: center;
+    background-size: cover;
+
+    &__content {
+        text-align: center;
+
+        h3 {
+            color: $white-color;
+            text-shadow: $text-shadow;
+        }
+    }
+}
