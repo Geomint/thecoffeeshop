@@ -8,11 +8,13 @@ class ContactForm(forms.Form):
 
     name = forms.CharField()
     email = forms.EmailField()
-    message = forms.Textarea()
+    message = forms.CharField(
+        widget = forms.Textarea()
+    )
 
     class Meta:
         fields = [
             'name',
             'email',
-            'message'
+            'message',
         ]
