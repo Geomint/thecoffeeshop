@@ -1,4 +1,5 @@
 from django.db import models
+from products.model import Product
 
 # Create your models here.
 
@@ -15,4 +16,13 @@ class Order(models.Model):
 
     def __str__(self):
         return f'{self.id}-{self.date}-{self.full_name}'
+
+class OrderItem(models.Model):
+    order = models.ForeignKey(Order, null=False)
+    product = modelds.ForeignKey(Product, null=False)
+    quantity = models.IntegerField(blank=False)
+
+    def __str__(self):
+        return f'{self.quantity}-{self.product.title}'
+
 
