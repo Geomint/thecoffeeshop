@@ -31,17 +31,16 @@ def contact_us_view(request):
     if request.method == 'POST':
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
-            send_mail(
-                request.POST['name'],
-                request.POST['message'],
-                'george.pyott@googlemail.com',
-                [request.POST['email']],
-            )
+            name = contact_form.cleaned_data['name']
+            message = contact_form.cleaned_data['message']
+            from_email = contact_form.cleaned_data['email']
+            send_mail(name, message, from_email, [
+                      'george.pyott@googlemail.com'], fail_silently=False)
             messages.success(
                 request, "Your message has been sent, we will be in touch soon.")
             return redirect('contact')
     else:
         contact_form = ContactForm()
-    
+
     page_title = 'Contact Us'
     return render(request, "contact_us.html", {'page_title': page_title, 'contact_form': contact_form})
