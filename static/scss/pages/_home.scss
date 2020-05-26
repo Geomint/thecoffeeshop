@@ -1,10 +1,11 @@
 // home-page stlyes
 
 .home {
-    padding-top: 30px;
+    padding-top: 10px;
 
     &__layout {
-        padding: 30px 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     &__split {
@@ -18,11 +19,24 @@
         &__title {
             padding-bottom: 5px;
             font-size: 4rem;
+
+            @include breakpoint(xs) {
+                font-size: 2.2rem;
+            }
         }
 
         &__quote {
             font-style: italic;
             font-size: 1.3rem;
+        }
+
+        &__logo {
+            padding-bottom: 10px;
+            max-width: 20%;
+
+            @include breakpoint(xs) {
+                max-width: 40%;
+            }
         }
     }
 
@@ -67,19 +81,17 @@
                     background: $secondary-color;
                     padding: 10px;
                     border-radius: $default-border-radius;
-                    
-        
+
+
                     &__text {
                         color: $white-color;
                     }
-        
-                    &__price {
-        
-                    }
+
+                    &__price {}
                 }
             }
         }
 
-     
+
     }
 }
