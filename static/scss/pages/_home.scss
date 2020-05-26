@@ -1,0 +1,38 @@
+// home-page stlyes
+
+.home {
+    padding: 30px 0;
+
+    &__layout {
+        padding: 30px 0;
+    }
+
+    &__title {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    &__promo {
+        background: $primary-color;
+        box-shadow: $panel-shadow;
+        border-radius: $default-border-radius;
+
+        &__text {
+            color: $white-color;
+            padding: 10px;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+    }
+
+    &__welcome {
+
+        &__title {
+            padding-bottom: 20px;
+        }
+
+        &__text {
+            padding-bottom: 10px;
+        }
+    }
+}
