@@ -3,21 +3,47 @@
 .search {
     position: fixed;
     z-index: 1;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background: $primary-color;
+    border-radius: $default-border-radius;
+    background-image: url('/static/images/banners/texture-background.png');
+    background-position: center;
+    background-size: cover;
+    box-shadow: $panel-shadow;
     width: 60%;
 
     &__form {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        box-shadow: $panel-shadow;
+        border-radius: $default-border-radius;
        
         &__input {
-        
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px 0 0 6px;
+            border: none;
+            outline: none;
         }
 
         &__button {
+            padding: 10px;
+            width: 12%;
+            background: $primary-color;
+            border-radius: 0 6px 6px 0;
+            border: none;
+            transition: $fast-transition;
+            i {
+                color: $black-color;
+            }
 
+            &:hover {
+                background: darken($primary-color, 10%);
+                color: lighten($black-color, 10%);
+            }
         }
     }
 
