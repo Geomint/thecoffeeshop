@@ -8,7 +8,6 @@
 // import components sass files
 @import 'components/header';
 @import 'components/footer';
-@import 'components/banners/top-banner';
 @import 'components/buttons/buttons';
 @import 'components/products';
 @import 'components/forms';
@@ -16,6 +15,8 @@
 @import 'components/cart';
 @import 'components/search';
 @import 'components/overlay';
+@import 'components/banners/top-banner';
+@import 'components/banners/strip-banner';
 
 // import page styles
 @import 'pages/logout';
