@@ -157,6 +157,8 @@ Transitions:
 * <a href="https://www.favicon-generator.org/">Favicon Generator</a>  
 * <a href="https://coolors.co/">Coolors.co</a>
 * <a href="https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB">Unicorn Revealer</a>
+* <a href="https://hatchful.shopify.com/">Logo Design</a>
+
 
 ## Disclaimer
 The contents of this website are for educational purposes only.
