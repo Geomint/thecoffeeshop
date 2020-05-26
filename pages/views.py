@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from products.models import Product
+from django.core.mail import send_mail
+from django.contrib import messages
+from .forms import ContactForm
 
 # Create your views here.
 
@@ -20,9 +23,25 @@ def about_view(request):
     page_title = 'About Us'
     return render(request, "about_us.html", {'page_title': page_title})
 
+
 def contact_us_view(request):
     """
     Returns the contact_us.html page and allows user to post contact forms
     """
+    if request.method == 'POST':
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            send_mail(
+                request.POST['name'],
+                request.POST['message'],
+                'george.pyott@googlemail.com',
+                [request.POST['email']],
+            )
+            messages.success(
+                request, "Your message has been sent, we will be in touch soon.")
+            return redirect('contact')
+    else:
+        contact_form = ContactForm()
+    
     page_title = 'Contact Us'
-    return render(request, "contact_us.html", {'page_title': page_title})
+    return render(request, "contact_us.html", {'page_title': page_title, 'contact_form': contact_form})
