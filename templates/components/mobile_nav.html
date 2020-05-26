@@ -2,9 +2,25 @@
 <div class="mobile-nav">
     <div class="mobile-nav__panel">
         <div class="mobile-nav__panel__inner">
-            <p class="mobile-nav__title">The Coffee Shop</p>
-            <ul class="mobile-nav__panel__list">
-            </ul>
+            <div class="mobile-nav__panel__inner__top">
+                <div class="mobile-nav__search">
+                    <form class="mobile-nav__search__form" action="{% url 'search' %}" method="GET">
+                        <input class="mobile-nav__search__form__input" type="text" name="q" placeholder="Search for a product name">
+                        <button class="mobile-nav__search__form__button" type="search"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <ul class="mobile-nav__panel__list">
+                    <li class="mobile-nav__panel__list__item"><a href="/"><i class="fas fa-home"></i>Home</a></li>
+                    <li class="mobile-nav__panel__list__item"><a href="/"><i class="fas fa-shopping-basket"></i>Shop</a></li>
+                    <li class="mobile-nav__panel__list__item"><a href="/"><i class="fas fa-question-circle"></i>About Us</a></li>
+                    <li class="mobile-nav__panel__list__item"><a href="/"><i class="fas fa-phone"></i>Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="mobile-nav__panel__inner__bottom">
+                <img class="mobile-nav__panel__inner__bottom__logo img-responsive logo" src="/static/images/logo/logo-sm.png" alt="The Coffee Shop Logo">
+                <h2 class="mobile-nav__panel__inner__bottom__title">The Coffee Shop</h2>
+                <p class="mobile-nav__panel__inner__bottom__quote">"Coffee, then adulting"</p>
+            </div>
         </div>
     </div>
 </div>
