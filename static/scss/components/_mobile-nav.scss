@@ -40,22 +40,41 @@
             &::-webkit-scrollbar {
                 display: none;
             }
+
+            &__bottom {
+                background: $tertiary-color;
+                padding: 20px;
+                text-align: center;
+
+                &__logo {
+                    max-width: 50%;
+                }
+
+                &__title {
+                    padding: 5px 0;
+                }
+
+                &__quote {
+                    font-style: italic;
+                    font-size: 1.3rem;
+                }
+            }
         }
 
         &__list {
             list-style: none;
-            padding-left: 15px;
 
             &__item {
-                padding-top: 10px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                padding: 20px;
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
 
                 a {
-                    color: $white-color;
-                    font-size: 1rem;
-
-                    &:hover {
-                        color: darken($secondary-color, 10%);
-                        text-decoration: none;
+                    i {
+                        padding-right: 10px;
                     }
                 }
             }
@@ -76,5 +95,43 @@
         padding: 10px;
         font-size: 1.5rem;
         color: white;
+    }
+
+    &__search {
+        padding: 20px;
+
+        &__form {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            box-shadow: $panel-shadow;
+            border-radius: $default-border-radius;
+
+            &__input {
+                width: 100%;
+                padding: 10px;
+                border-radius: 6px 0 0 6px;
+                border: none;
+                outline: none;
+            }
+
+            &__button {
+                padding: 10px;
+                width: 12%;
+                background: $primary-color;
+                border-radius: 0 6px 6px 0;
+                border: none;
+                transition: $fast-transition;
+
+                i {
+                    color: $black-color;
+                }
+
+                &:hover {
+                    background: darken($primary-color, 10%);
+                    color: lighten($black-color, 10%);
+                }
+            }
+        }
     }
 }
