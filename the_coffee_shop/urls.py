@@ -20,6 +20,7 @@ from products import urls as urls_products
 from accounts import urls as urls_accounts
 from cart import urls as urls_cart
 from search import urls as urls_search
+from pages import urls as urls_pages
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -27,6 +28,7 @@ urlpatterns = [
     url(r'about$', about_view, name="about"),
     url(r'contact$', contact_us_view, name="contact"),
     url(r'products/', include(urls_products)),
+    url(r'', include(urls_pages)),
     url(r'accounts/', include(urls_accounts)),
     url(r'search/', include(urls_search)),
     url(r'cart/', include(urls_cart)),
