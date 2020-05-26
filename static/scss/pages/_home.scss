@@ -7,6 +7,10 @@
         padding: 30px 0;
     }
 
+    &__split {
+        background: $secondary-color;
+    }
+
     &__title {
         text-align: center;
         padding-bottom: 15px;
@@ -34,5 +38,38 @@
         &__text {
             padding-bottom: 10px;
         }
+    }
+
+    &__latest-products {
+
+        &__title {
+            text-align: center;
+        }
+
+        &__slick {
+
+            &__slide {
+                padding: 0 15px;
+
+                &__content {
+                    box-shadow: $panel-shadow;
+                    text-align: center;
+                    background: $secondary-color;
+                    padding: 10px;
+                    border-radius: $default-border-radius;
+                    
+        
+                    &__text {
+                        color: $white-color;
+                    }
+        
+                    &__price {
+        
+                    }
+                }
+            }
+        }
+
+     
     }
 }
