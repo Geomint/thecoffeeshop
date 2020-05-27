@@ -6,23 +6,27 @@
 <div class="container">
     <section class="row">
         <div class="col-12">
-            <h1>Your Shopping Cart</h1>
+            <h1 class="page__heading">Your Cart</h1>
         </div>
     </section>
     {% for p in cart_items %}
     <section class="row cart-row">
-        <div class="col-md-3">
+        <div class="col-5 col-md-4">
             <div class="cart__item">
                 <img class="cart__item__thumbnail img-responsive" src="/static/{{p.product.image}}"
                     alt="{{product.name}}">
             </div>
         </div>
-        <div class="col-md-9">
+        <div class="col-7 col-md-8">
             <div class="cart__item__contents">
                 <h3>{{p.product.name}}</h3>
-                <p>Product excerpt will go here. Product excerpt will go here. Product excerpt will go here.
-                    Product excerpt will go here. Product excerpt will go here.</p>
+                <p class="cart__item__contents__excerpt">EXCERPT WILL GO HERE</p>
+                <p class="cart__item__contents__rrp">£RRP</p>
                 <p class="cart__item__contents__price">£{{p.product.price}}</p>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="cart__adjust">
                 <h5>In the cart: {{ p.quantity }}</h5>
                 <form method="POST" class="cart__item__update-form" action="{% url 'adjustcart' p.id %}">
                     {% csrf_token %}
