@@ -18,10 +18,10 @@ class PaymentForm(forms.Form):
     stripe_id = forms.CharField(widget=forms.HiddenInput)
 
 
-class OrderForm(forms.Form):
+class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = (
+        fields = [
             'full_name',
             'phone_number',
             'country',
@@ -29,4 +29,4 @@ class OrderForm(forms.Form):
             'city',
             'address_line_1',
             'address_line_2',
-        )
+        ]
