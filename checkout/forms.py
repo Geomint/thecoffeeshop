@@ -2,7 +2,7 @@ from django import forms
 from .models import Order
 
 
-class PaymentForm(forms.form):
+class PaymentForm(forms.Form):
     """
     Form to allow user to enter in card details to make payment
     """
@@ -10,7 +10,7 @@ class PaymentForm(forms.form):
     YEAR_CHOCIES = [(i, i) for i in range(2018, 2040)]
 
     card_number = forms.CharField(label='Card Number', required=True)
-    cvv = forms.CharField(label='CVV', requrired=True)
+    cvv = forms.CharField(label='CVV', required=True)
     expiry_month = forms.ChoiceField(
         label='Expiry Month', choices=MONTH_CHOICES, required=True)
     expiry_year = forms.ChoiceField(
@@ -18,7 +18,7 @@ class PaymentForm(forms.form):
     stripe_id = forms.CharField(widget=forms.HiddenInput)
 
 
-class OrderForm(forms.form):
+class OrderForm(forms.Form):
     class Meta:
         model = Order
         fields = (
