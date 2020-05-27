@@ -9,6 +9,7 @@
             <h1 class="page__heading">Your Cart</h1>
         </div>
     </section>
+    {% if product_total > 0 %}
     {% for p in cart_items %}
     <section class="row cart-row">
         <div class="col-5 col-md-4">
@@ -43,7 +44,8 @@
     <section class="row">
         <div class="col-md-6 align align--center">
             <div class="cart__extras">
-                <p>Are you missing some items? make sure to double check <a href="/">in the shop</a> before placing your order!</p>
+                <p>Are you missing some items? make sure to double check <a href="/">in the shop</a> before placing your
+                    order!</p>
             </div>
         </div>
         <div class="col-md-6">
@@ -52,6 +54,16 @@
             <a class="btn btn--primary" href="">Checkout</a>
         </div>
     </section>
-
+    {% else %}
+    <section class="row">
+        <div class="col-12">
+            <div class="cart__empty">
+                <h3>Your cart is empty!</h3>
+                <p>Browse our extensive range of coffee products in our online shop!</p>
+                <a class="btn btn--primary" href="/products">Continue Shopping</a>
+            </div>
+        </div>
+    </section>
+    {% endif %}
 </div>
 {% endblock %}
