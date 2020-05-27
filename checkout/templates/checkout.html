@@ -13,6 +13,9 @@
             <h3 class="checkout__header">Customer Details</h3>
             <div class="checkout__details">
                 <form role="form" method="POST" id="payment-form" class="checkout__form" action="{% url 'checkout' %}">
+                    <div id="credit-card-errors" style='display: none;'>
+                        <div class="" id="stripe-error-message"></div>
+                    </div>
                     {% csrf_token %}
                     <div class="checkout__form__panel">
                         <div class="checkout__form__group">
@@ -40,15 +43,11 @@
                             {{ order_form.address_line_1 }}
                         </div>
                         <div class="checkout__form__group">
-                            <label class="checkout__form__group__label" for="address_line_2">Address Line 2:</label>
+                            <label class="checkout__form__group__label" for="address_line_2">Address Line 2:<span class="form__required"> *</span></label>
                             {{ order_form.address_line_2 }}
                         </div>
                     </div>
                     <div class="checkout__form__panel">
-                        <div class="checkout__form__group">
-                            <label class="checkout__form__group__label" for="card_name">Name On Card:<span class="form__required"> *</span></label>
-                            {{ payment_form.card_name }}
-                        </div>
                         <div class="checkout__form__group">
                             <label class="checkout__form__group__label" for="card_number">Card Number:<span class="form__required"> *</span></label>
                             {{ payment_form.card_number }}
@@ -66,10 +65,10 @@
                             {{ payment_form.expiry_year }}
                         </div>
                         <div class="checkout__form__group">
-                            {{ payment_form.strip_id }}
+                            {{ payment_form.stripe_id }}
                         </div>
                     </div>
-                    <button type="submit" name="commit" id="sumbit-payment-button" class="btn btn--primary">Pay</button>
+                    <button type="submit" name="commit" id="sumbit_payment_button" class="btn btn--primary">Pay</button>
                 </form>
             </div>
         </div>
