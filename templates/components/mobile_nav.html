@@ -12,12 +12,12 @@
                     </form>
                 </div>
                 <ul class="mobile-nav__panel__list">
-                    <li class="mobile-nav__panel__list__item"><a href="/"><i class="fas fa-home"></i>Home</a></li>
-                    <li class="mobile-nav__panel__list__item"><a href="/"><i class="fas fa-shopping-basket"></i>Shop</a>
+                    <li class="mobile-nav__panel__list__item"><a href="{% url 'home' %}"><i class="fas fa-home"></i>Home</a></li>
+                    <li class="mobile-nav__panel__list__item"><a href="/products"><i class="fas fa-shopping-basket"></i>Shop</a>
                     </li>
-                    <li class="mobile-nav__panel__list__item"><a href="/"><i class="fas fa-question-circle"></i>About
+                    <li class="mobile-nav__panel__list__item"><a href="{% url 'about' %}"><i class="fas fa-question-circle"></i>About
                             Us</a></li>
-                    <li class="mobile-nav__panel__list__item"><a href="/"><i class="fas fa-phone"></i>Contact Us</a>
+                    <li class="mobile-nav__panel__list__item"><a href="{% url 'contact' %}"><i class="fas fa-phone"></i>Contact Us</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="mobile-nav__panel__list__item"><a href="{% url 'profile' %}"><i class="fas fa-user"></i>Profile</a></li>
