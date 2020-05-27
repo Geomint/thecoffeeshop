@@ -35,34 +35,40 @@
         }
 
         &__update-form {
-           
+
             &__group {
                 display: flex;
                 flex-wrap: nowrap;
 
                 input {
-                    background: $tertiary-color;
-                    border: none;
+                    border: 1px solid $primary-color;
                     outline: none;
-                    border-radius: $default-border-radius;
+                    border-radius: 6px 0 0 6px;
+                    text-align: center;
+                }
+
+                button {
+                    border-radius: 0 6px 6px 0;
                 }
             }
         }
     }
 
     &__total {
-        font-size: 1.3rem;
-        padding-bottom: 10px;
-        color: $success-color;
+        @include breakpoint(xs) {
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        &__value {
+            font-size: 1.3rem;
+            padding-bottom: 10px;
+            color: $success-color;
+        }
     }
 
     &__adjust {
-        text-align: left;
         padding-top: 20px;
-
-        @include breakpoint(xs) {
-            text-align: center;
-        }
     }
 
     &__empty {
@@ -70,6 +76,12 @@
 
         p {
             padding: 10px 0;
+        }
+    }
+
+    &__extras {
+        @include breakpoint(xs) {
+            text-align: center;
         }
     }
 }
