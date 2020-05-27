@@ -6,7 +6,7 @@
 <div class="container">
     <section class="row">
         <div class="col-12">
-            <h2 class="page__heading">Welcome back, <span class="profile__message__user">{{user.username}}.</span></h2>
+            <h1 class="page__heading">Welcome back, <span class="profile__message__user">{{user.username}}.</span></h1>
         </div>
     </section>
 
@@ -33,10 +33,6 @@
                         <li class="profile__navigation__list__item"><i class="fas fa-fw fa-shopping-basket"></i>My
                             Orders</li>
                     </a>
-                    <a href="/accounts/logout">
-                        <li class="profile__navigation__list__item"><i class="fas fa-fw fa-sign-out-alt"></i>Log Out
-                        </li>
-                    </a>
                     <!-- if flagged as staff or admin -->
                     {% if user.is_staff %}
                         <a class="profile__navigation__link__product-upload" href="#">
@@ -44,14 +40,17 @@
                             </li>
                         </a>
                     {% endif %}
+                    <a href="/accounts/logout">
+                        <li class="profile__navigation__list__item"><i class="fas fa-fw fa-sign-out-alt"></i>Log Out
+                        </li>
+                    </a>
                 </ul>
             </div>
         </div>
         <!-- account panel -->
         <div class="col-md-8 col-12 profile__dashboard__account">
-            <h1 class="profile__dashboard__title">Your Account</h1>
             <div class="profile__dashboard">
-                
+                <h2 class="profile__dashboard__title">Your Account</h2>
                 <div class="profile__dashboard__edit">
                     <h5>Edit your account details</h5>
                     <a class="edit-profile-trigger" href="#"><i class="fas fa-edit"></i></a>
@@ -95,15 +94,15 @@
         </div>
         <!-- orders panel -->
         <div class="col-md-8 col-12 profile__dashboard__orders">
-            <h1 class="profile__dashboard__title">Your Orders</h1>
             <div class="profile__dashboard">
+                <h2 class="profile__dashboard__title">Your Orders</h2>
                 <p>DISPLAY ORDERS HERE IF ANY</p>
             </div>
         </div>
         <!-- product upload panel -->
         <div class="col-md-8 col-12 profile__dashboard__product">
-            <h1 class="profile__dashboard__title">Upload A Product</h1>
             <div class="profile__dashboard">
+                <h2 class="profile__dashboard__title">Upload A Product</h2>
                 <form class="profile__dashboard__product__form" method="POST" action="{% url 'profile' %}">
                     {% csrf_token %}
                     <div class="profile__dashboard__group__product">
