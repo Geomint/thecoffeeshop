@@ -5,24 +5,24 @@
     &__header {
         text-align: center;
         padding-bottom: 10px;
+
+        @include breakpoint(xs) {
+            padding: 15px 0;
+        }
     }
 
     &__total {
         text-align: center;
-        
+
         p {
             font-size: 1.5rem;
             padding-bottom: 10px;
         }
     }
 
-    &__details {
+    &__details {}
 
-    }
-
-    &__summary {
-
-    }
+    &__summary {}
 
     &__row {
         padding: 10px;
@@ -30,5 +30,39 @@
         border-radius: $default-border-radius;
         margin-bottom: 10px;
         box-shadow: $panel-shadow;
+    }
+
+    &__form {
+
+        &__group {
+
+            &__label {
+                display: block;
+                padding: 15px 0;
+                margin: 0;
+            }
+
+            input {
+                width: 100%;
+                height: 45px;
+                border-radius: $default-border-radius;
+                box-shadow: $panel-shadow;
+                border: none;
+                outline: none;
+                padding: 10px;
+            }
+        }
+
+        &__panel {
+            padding: 25px 50px;
+            background: $main-panel-color;
+            border-radius: $default-border-radius;
+            margin-bottom: 10px;
+            box-shadow: $panel-shadow;
+
+            @include breakpoint(xs) {
+                padding: 25px 20px;
+            }
+        }
     }
 }
