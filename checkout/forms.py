@@ -9,6 +9,7 @@ class PaymentForm(forms.Form):
     MONTH_CHOICES = [(i, i) for i in range(1, 12)]
     YEAR_CHOCIES = [(i, i) for i in range(2018, 2040)]
 
+    card_name = forms.CharField(label='Card Name', required=True)
     card_number = forms.CharField(label='Card Number', required=True)
     cvv = forms.CharField(label='CVV', required=True)
     expiry_month = forms.ChoiceField(
