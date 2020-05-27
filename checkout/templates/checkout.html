@@ -10,14 +10,66 @@
 
     <section class="row">
         <div class="col-md-8">
+            <h3 class="checkout__header">Customer Details</h3>
             <div class="checkout__details">
-                <form class="checkout__form" action="">
+                <form role="form" method="POST" id="payment-form" class="checkout__form" action="{% url 'checkout' %}">
                     {% csrf_token %}
-                    <div class="checkout__form__group">
-                        
+                    <div class="checkout__form__panel">
+                        <div class="checkout__form__group">
+                            <label class="checkout__form__group__label" for="full_name">Full Name:<span class="form__required"> *</span></label>
+                            {{ order_form.full_name }}
+                        </div>
+                        <div class="checkout__form__group">
+                            <label class="checkout__form__group__label" for="phone_number">Phone Number:<span class="form__required"> *</span></label>
+                            {{ order_form.phone_number }}
+                        </div>
+                        <div class="checkout__form__group">
+                            <label class="checkout__form__group__label" for="country">Country:<span class="form__required"> *</span></label>
+                            {{ order_form.country }}
+                        </div>
+                        <div class="checkout__form__group">
+                            <label class="checkout__form__group__label" for="postcode">Postcode:<span class="form__required"> *</span></label>
+                            {{ order_form.postcode }}
+                        </div>
+                        <div class="checkout__form__group">
+                            <label class="checkout__form__group__label" for="city">City:<span class="form__required"> *</span></label>
+                            {{ order_form.city }}
+                        </div>
+                        <div class="checkout__form__group">
+                            <label class="checkout__form__group__label" for="address_line_1">Address Line 1:<span class="form__required"> *</span></label>
+                            {{ order_form.address_line_1 }}
+                        </div>
+                        <div class="checkout__form__group">
+                            <label class="checkout__form__group__label" for="address_line_2">Address Line 2:</label>
+                            {{ order_form.address_line_2 }}
+                        </div>
                     </div>
-                    {{ payment_form }}
-                    {{ order_form }}
+                    <div class="checkout__form__panel">
+                        <div class="checkout__form__group">
+                            <label class="checkout__form__group__label" for="card_name">Name On Card:<span class="form__required"> *</span></label>
+                            {{ payment_form.card_name }}
+                        </div>
+                        <div class="checkout__form__group">
+                            <label class="checkout__form__group__label" for="card_number">Card Number:<span class="form__required"> *</span></label>
+                            {{ payment_form.card_number }}
+                        </div>
+                        <div class="checkout__form__group">
+                            <label class="checkout__form__group__label" for="cvv">CVV:<span class="form__required"> *</span></label>
+                            {{ payment_form.cvv }}
+                        </div>
+                        <div class="checkout__form__group">
+                            <label class="checkout__form__group__label" for="expiry_month">Expiry Month:<span class="form__required"> *</span></label>
+                            {{ payment_form.expiry_month }}
+                        </div>
+                        <div class="checkout__form__group">
+                            <label class="checkout__form__group__label" for="expiry_year">Expiry Year:<span class="form__required"> *</span></label>
+                            {{ payment_form.expiry_year }}
+                        </div>
+                        <div class="checkout__form__group">
+                            {{ payment_form.strip_id }}
+                        </div>
+                    </div>
+                    <button type="submit" name="commit" id="sumbit-payment-button" class="btn btn--primary">Pay</button>
                 </form>
             </div>
         </div>
