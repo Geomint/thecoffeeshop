@@ -20,6 +20,10 @@
         &__contents {
             padding: 2vh;
 
+            @include breakpoint(xs) {
+                text-align: center;
+            }
+
             p {
                 padding: 5px 0;
             }
@@ -31,8 +35,18 @@
         }
 
         &__update-form {
+           
+            &__group {
+                display: flex;
+                flex-wrap: nowrap;
 
-            &__group {}
+                input {
+                    background: $tertiary-color;
+                    border: none;
+                    outline: none;
+                    border-radius: $default-border-radius;
+                }
+            }
         }
     }
 
@@ -40,5 +54,14 @@
         font-size: 1.3rem;
         padding-bottom: 10px;
         color: $success-color;
+    }
+
+    &__adjust {
+        text-align: left;
+        padding-top: 20px;
+
+        @include breakpoint(xs) {
+            text-align: center;
+        }
     }
 }
