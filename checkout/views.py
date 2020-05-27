@@ -54,7 +54,7 @@ def checkout_view(request):
                 messages.error(request, "Unable to process your payment")
         else:
             print(payment_form.errors)
-            messages.error(rqeuest, "We were unable to take payment with those card details")
+            messages.error(request, "We were unable to take payment with those card details")
     else:
         order_form = OrderForm()
         payment_form = PaymentForm()
