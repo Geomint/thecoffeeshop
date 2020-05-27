@@ -9,3 +9,10 @@ from products.models import Product
 import stripe
 
 # Create your views here.
+
+@login_required()
+def checkout_view(request):
+    """
+    renders checkout page
+    """
+    return render(request, "checkout.html")
