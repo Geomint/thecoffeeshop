@@ -30,7 +30,9 @@ class Product(models.Model):
         choices=GRIND_OPTIONS,
         default=FINE,
     )
-    description = models.TextField()
+    description1 = models.TextField()
+    description2 = models.TextField()
+    promoted = models.BooleanField(default=False)
     image = models.ImageField(upload_to='images')
     price = models.DecimalField(max_digits=6, decimal_places=2)
 
