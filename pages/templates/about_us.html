@@ -9,24 +9,18 @@
     </section>
 
     <section class="row">
-        <div class="col-md-4">
-            <img class="img-responsive logo" src="/static/images/logo/logo-sm.png" alt="">
-        </div>
-        <div class="col-md-8 align align--center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa nisi rerum inventore molestias itaque rem,
-            dolores, illum et impedit alias voluptates provident labore. Cumque libero labore iusto possimus laborum
-            quo.
-        </div>
-    </section>
-
-    <section class="row">
-        <div class="col-md-8 align align--center">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa nisi rerum inventore molestias itaque rem,
-            dolores, illum et impedit alias voluptates provident labore. Cumque libero labore iusto possimus laborum
-            quo.
-        </div>
-        <div class="col-md-4">
-            <img class="img-responsive logo" src="/static/images/logo/logo-sm.png" alt="">
+        <div class="col-12">
+            <img class="img-responsive logo about__logo" src="/static/images/logo/logo-sm.png"
+                alt="The Coffee Shop Logo">
+            <div class="about__intro">
+                <p>Like most, we love everything about coffee, we pride ourselves on offering the best
+                    that the market currently has to offer, if you would like to speak to someone about our products or
+                    have
+                    just a general enquiry, feel free to send us a message and one of our friendly staff members will be
+                    in
+                    touch!</p>
+                <a class="btn btn--primary" href="{% url 'contact' %}">Get In Touch</a>
+            </div>
         </div>
     </section>
 
@@ -36,8 +30,8 @@
         </div>
     </section>
 
-    <section class="row about__row-layout">
-        <div class="col-md-3 flex">
+    <section class="row">
+        <div class="col-md-3 flex ">
             <div class="about__grinds__wrapper" style="background-image: url(/static/images/about/extra-coarse.png)">
                 <div class="about__grinds__wrapper__content">
                     <h3 class="about__grinds__wrapper__header">Extra Coarse</h3>
@@ -50,10 +44,13 @@
         <div class="col-md-3 flex">
             <div class="about__grinds__wrapper" style="background-image: url(/static/images/about/coarse.png)">
                 <div class="about__grinds__wrapper__content">
-                    <h3 class="about__grinds__header">Coarse</h3>
-                    <p class="about__grinds__text">If you brew with a French Press, you should know your coarse grind.
-                        It
-                        should look similar to sea salt.</p>
+                    <div class="about__grinds__wrapper__content__text">
+                        <h3 class="about__grinds__header">Coarse</h3>
+                        <p class="about__grinds__text">If you brew with a French Press, you should know your coarse
+                            grind.
+                            It
+                            should look similar to sea salt.</p>
+                    </div>
                 </div>
 
             </div>
@@ -79,8 +76,6 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="row about__row-layout">
         <div class="col-md-3 flex">
             <div class="about__grinds__wrapper" style="background-image: url(/static/images/about/medium-fine.png)">
                 <div class="about__grinds__wrapper__content">
@@ -94,12 +89,15 @@
         <div class="col-md-6 flex">
             <div class="about__grinds__wrapper" style="background-image: url(/static/images/about/fine.png)">
                 <div class="about__grinds__wrapper__content">
+                    <div class="about__grinds__wrapper__content__text">
                     <h3 class="about__grinds__header">Fine</h3>
-                    <p class="about__grinds__text">The most common grind size you’ll come across. When you buy
-                        pre-ground
-                        coffee, it’s usually a fine grind size (unless otherwise stated). In terms of consistency, it’s
-                        a
-                        little finer than table salt. </p>
+                        <p class="about__grinds__text">The most common grind size you’ll come across. When you buy
+                            pre-ground
+                            coffee, it’s usually a fine grind size (unless otherwise stated). In terms of consistency,
+                            it’s
+                            a
+                            little finer than table salt. </p>
+                    </div>
                 </div>
 
             </div>
