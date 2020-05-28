@@ -97,7 +97,23 @@
             <div class="profile__dashboard">
                 <h2 class="profile__dashboard__title">Your Orders</h2>
                 {% for order in orders %}
-                <p>{{order}}</p>
+                <div class="profile__dashboard__orders">
+                    <section class="row">
+                        <div class="col-md-4 col-5">
+                            <div class="profile__dashboard__orders__image">
+                                <img class="img-responsive" src="/static/{{order.product.image}}" alt="{{order.product.name}}">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-7 align align--center">
+                            <div class="profile__dashboard__orders__details">
+                                <p>Item: {{order.product.name}}</p>
+                                <p>qty: {{order.quantity}}</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+             
+                
                 {% endfor %}
             </div>
         </div>
