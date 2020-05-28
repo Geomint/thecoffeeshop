@@ -9,8 +9,13 @@
     &__logo {
         img {
             width: 40%;
+            margin: auto;
             display: block;
             padding: 20px 10px;
+
+            @include breakpoint(xs) {
+                margin: unset;
+            }
         }
     }
 
