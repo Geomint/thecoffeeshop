@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
-
 {% block title %} The Coffee Shop | Profile Page Page {% endblock %}
-
 {% block content %}
 <div class="container">
     <section class="row">
@@ -100,26 +98,36 @@
             <div class="profile__dashboard">
                 <h2 class="profile__dashboard__title">Your Orders</h2>
                 {% for order in all_orders %}
-                <div class="profile__dashboard__orders">
+                <div class="profile__dashboard__orders__panel">
                     {% for order_item in order.order_items %}
-                    <section class="row">
+                    <section class="row profile__dashboard__orders__line-item">
                         <div class="col-md-4 col-5">
                             <div class="profile__dashboard__orders__image">
-                                <img class="img-responsive" src="/static/{{order_item.product.image }}" alt="{{order_item.product.name}}">
+                                <img class="img-responsive" src="/static/{{order_item.product.image }}"
+                                    alt="{{order_item.product.name}}">
                             </div>
                         </div>
                         <div class="col-md-6 col-7 align align--center">
                             <div class="profile__dashboard__orders__details">
-                                {{ order_item.product.name }}
-                                {{ order_item.quantity }}
-                                {{ order_item.product.price }}
+                                <h5>{{ order_item.product.name }}</h5>
+                                <p>qty: {{ order_item.quantity }}</p>
+                                <p>Price: {{ order_item.product.price }}</p>
                             </div>
                         </div>
                     </section>
                     {% endfor %}
+                    <section class="row">
+                        <div class="col-md-6">
+                            <h5 class="profile__dashboard__orders__total">Order Total: £{{order.total}}</h5>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="profile__dashboard__orders__cta">
+                                <p>Need help with this order?</p>
+                                <a class="btn btn--primary" href="{% url 'contact' %}">Contact Us</a>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-
-
                 {% endfor %}
             </div>
         </div>
