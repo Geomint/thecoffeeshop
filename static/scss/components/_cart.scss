@@ -83,5 +83,9 @@
         @include breakpoint(xs) {
             text-align: center;
         }
+
+        a {
+            color: $text-on-white-color;
+        }
     }
 }
