@@ -32,6 +32,11 @@
                 color: $success-color;
                 font-size: 1.4rem;
             }
+
+            &__rrp {
+                color: $required-color;
+                text-decoration: line-through;
+            }
         }
 
         &__update-form {
