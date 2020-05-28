@@ -96,7 +96,9 @@
         <div class="col-md-8 col-12 profile__dashboard__orders">
             <div class="profile__dashboard">
                 <h2 class="profile__dashboard__title">Your Orders</h2>
-                <p>DISPLAY ORDERS HERE IF ANY</p>
+                {% for order in orders %}
+                <p>{{order}}</p>
+                {% endfor %}
             </div>
         </div>
         <!-- product upload panel -->
