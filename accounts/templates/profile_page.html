@@ -31,7 +31,6 @@
                         <li class="profile__navigation__list__item"><i class="fas fa-fw fa-shopping-basket"></i>My
                             Orders</li>
                     </a>
-                    <!-- if flagged as staff or admin -->
                     {% if user.is_staff %}
                     <a class="profile__navigation__link__product-upload" href="#">
                         <li class="profile__navigation__list__item"><i class="fas fa-fw fa-upload"></i>Upload a Product
@@ -55,8 +54,6 @@
                     <a class="profile__dashboard__edit__close edit-profile-close" href="#"><i
                             class="profile__dashboard__close fas fa-window-close"></i></a>
                 </div>
-
-
                 <form method="POST" id="edit-details-form" class="profile__dashboard__edit__form"
                     action="{% url 'profile' %}">
                     {% csrf_token %}
@@ -97,6 +94,7 @@
         <div class="col-md-8 col-12 profile__dashboard__orders">
             <div class="profile__dashboard">
                 <h2 class="profile__dashboard__title">Your Orders</h2>
+                {% if all_orders > 0 %}
                 {% for order in all_orders %}
                 <div class="profile__dashboard__orders__panel">
                     {% for order_item in order.order_items %}
@@ -129,6 +127,13 @@
                     </section>
                 </div>
                 {% endfor %}
+                {% else %}
+                <div class="profile__dashboard__no-orders">
+                    <h4>No Orders!</h4>
+                    <p>Head over to our shop now to browse our coffee products!</p>
+                    <a class="btn btn--primary" href="/products">Shop Now</a>
+                </div>
+                {% endif %}
             </div>
         </div>
         <!-- product upload panel -->
