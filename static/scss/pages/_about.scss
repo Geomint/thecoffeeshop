@@ -2,8 +2,22 @@
 
 .about {
 
-    &__row-layout {
-        margin: 30px 0;
+    &__logo {
+        max-width: 15%;
+        margin-bottom: 30px;
+
+        @include breakpoint(xs) {
+            max-width: 40%;
+        }
+    }
+
+    &__intro {
+        text-align: center;
+        padding: 5px 0;
+
+        a {
+            margin-top: 20px;
+        }
     }
 
     &__grinds {
@@ -20,25 +34,21 @@
             position: relative;
             border-radius: $default-border-radius;
             box-shadow: $panel-shadow;
-            text-align: center;
+            margin-bottom: 30px;
 
-            // &::before {
-            //     content: '';
-            //     width: 100%;
-            //     height: 100%;
-            //     background: rgba(0, 0, 0, 0.3);
-            //     position: absolute;
-            //   }
-
-              &__content {
+            &__content {
                 padding: 20px;
-              }
+                text-align: center;
+                background: rgba(0, 0, 0, 0.5);
+                border-radius: $default-border-radius;
+                height: 100%;
+                text-align: center;
+
+                p {
+                    font-size: 0.9rem;
+                }
+            }
         }
-
-        &__text {
-
-        }
-
         &__header {
             margin: 0;
             padding: 0;
