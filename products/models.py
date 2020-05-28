@@ -30,13 +30,13 @@ class Product(models.Model):
         choices=GRIND_OPTIONS,
         default=FINE,
     )
-    excerpt = models.TextField(max_length=30)
-    description1 = models.TextField()
-    description2 = models.TextField()
+    excerpt = models.TextField(max_length=30, default='some string')
+    description = models.TextField(default='some string')
+    description2 = models.TextField(default='some string')
     promoted = models.BooleanField(default=False)
     image = models.ImageField(upload_to='images')
-    rrp = models.DecimalField(max_digits=6, decimal_places=2)
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    recommended_retail_price = models.DecimalField(max_digits=6, decimal_places=2, default=0.0)
 
     def __str__(self):
         return self.name
