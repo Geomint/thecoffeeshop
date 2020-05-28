@@ -1,6 +1,7 @@
 .products {
     text-align: center;
     display: flex;
+    margin: 15px 0;
 
     @include breakpoint(xs) {
         margin-bottom: 15px;
