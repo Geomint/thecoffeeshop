@@ -9,19 +9,28 @@
             <div class="col-md-6 col-sm-12">
                 <div class="product__image">
                     <img class="img-responsive" src="/static/{{product.image}}" alt="{{product.name}}">
-                </div>  
+                </div>
             </div>
             <div class="col-md-6 col-sm-12 align align--center">
                 <div class="product__content">
                     <h1 class="product__content__title">{{product.name}}</h1>
-                    <p class="product__content__grind"><span class="product__content__header">Grind Size: </span>{{product.grind_size}}<span class="product__content__info"><i class="fa fa-info"></i></span></p>
-                    <p class="product__content__description"><span class="product__content__header">Description: </span>{{product.description}}</p>
-                    <p class="product__content__price"><span class="product__content__price__rrp">RRP: £100</span>£{{product.price}}</p>
+                    <p class="product__content__grind"><span class="product__content__header">Grind Size:
+                        </span>{{product.grind_size}}<span class="product__content__info"><i
+                                class="fa fa-info"></i></span></p>
+                    <p class="product__content__description" id="description"><span
+                            class="product__content__header">Description: </span>{{product.description}}<a
+                            class="product__content__read" id="read-more" href="#">Read More</a><span
+                            class="product__content__description__two"
+                            id="more-description">{{product.description2}}<a
+                            class="product__content__read" id="read-less" href="#">Read Less</a></span></p>
+                    <p class="product__content__price"><span
+                            class="product__content__price__rrp">£{{product.recommended_retail_price}}</span>£{{product.price}}
+                    </p>
 
                     <form method="POST" action="{% url 'addtocart' product.id %}">
                         {% csrf_token %}
                         <div class="product__content__add-to-cart">
-                            <input type="number" name="quantity" value="1" min="1" max ="999" placeholder="Qauntity">
+                            <input type="number" name="quantity" value="1" min="1" max="999" placeholder="Qauntity">
                             <button class="btn btn--primary" type="submit">Add To Cart</button>
                         </div>
                     </form>
