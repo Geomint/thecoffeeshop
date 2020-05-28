@@ -35,10 +35,10 @@
                     </a>
                     <!-- if flagged as staff or admin -->
                     {% if user.is_staff %}
-                        <a class="profile__navigation__link__product-upload" href="#">
-                            <li class="profile__navigation__list__item"><i class="fas fa-fw fa-upload"></i>Upload a Product
-                            </li>
-                        </a>
+                    <a class="profile__navigation__link__product-upload" href="#">
+                        <li class="profile__navigation__list__item"><i class="fas fa-fw fa-upload"></i>Upload a Product
+                        </li>
+                    </a>
                     {% endif %}
                     <a href="/accounts/logout">
                         <li class="profile__navigation__list__item"><i class="fas fa-fw fa-sign-out-alt"></i>Log Out
@@ -54,11 +54,13 @@
                 <div class="profile__dashboard__edit">
                     <h5>Edit your account details</h5>
                     <a class="edit-profile-trigger" href="#"><i class="fas fa-edit"></i></a>
-                    <a class="profile__dashboard__edit__close edit-profile-close" href="#"><i class="profile__dashboard__close fas fa-window-close"></i></a>
+                    <a class="profile__dashboard__edit__close edit-profile-close" href="#"><i
+                            class="profile__dashboard__close fas fa-window-close"></i></a>
                 </div>
-         
 
-                <form method="POST" id="edit-details-form" class="profile__dashboard__edit__form" action="{% url 'profile' %}">
+
+                <form method="POST" id="edit-details-form" class="profile__dashboard__edit__form"
+                    action="{% url 'profile' %}">
                     {% csrf_token %}
                     <div class="profile__dashboard__group">
                         <p>Your Username:</p>
@@ -88,7 +90,8 @@
                             {{ update_form.last_name }}
                         </div>
                     </div>
-                    <button class="profile__dashboard__group__submit btn btn--primary" type="submit">Edit Details</button>
+                    <button class="profile__dashboard__group__submit btn btn--primary" type="submit">Edit
+                        Details</button>
                 </form>
             </div>
         </div>
@@ -96,24 +99,27 @@
         <div class="col-md-8 col-12 profile__dashboard__orders">
             <div class="profile__dashboard">
                 <h2 class="profile__dashboard__title">Your Orders</h2>
-                {% for order in orders %}
+                {% for order in all_orders %}
                 <div class="profile__dashboard__orders">
+                    {% for order_item in order.order_items %}
                     <section class="row">
                         <div class="col-md-4 col-5">
                             <div class="profile__dashboard__orders__image">
-                                <img class="img-responsive" src="/static/{{order.product.image}}" alt="{{order.product.name}}">
+                                <img class="img-responsive" src="/static/{{order_item.product.image }}" alt="{{order_item.product.name}}">
                             </div>
                         </div>
                         <div class="col-md-6 col-7 align align--center">
                             <div class="profile__dashboard__orders__details">
-                                <p>Item: {{order.product.name}}</p>
-                                <p>qty: {{order.quantity}}</p>
+                                {{ order_item.product.name }}
+                                {{ order_item.quantity }}
+                                {{ order_item.product.price }}
                             </div>
                         </div>
                     </section>
+                    {% endfor %}
                 </div>
-             
-                
+
+
                 {% endfor %}
             </div>
         </div>
@@ -148,7 +154,8 @@
                         {{product_upload_form.price}}
                     </div>
 
-                    <button class="profile__dashboard__group__product__submit btn btn--primary" type="submit">Upload Product</button>
+                    <button class="profile__dashboard__group__product__submit btn btn--primary" type="submit">Upload
+                        Product</button>
                 </form>
             </div>
         </div>
