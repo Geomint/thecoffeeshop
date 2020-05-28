@@ -21,7 +21,7 @@ def add_to_cart_view(request, id):
     else:
         cart[id] = cart.get(id, quantity) 
     request.session['cart'] = cart
-    return redirect(reverse('home'))
+    return redirect(reverse('cart'))
 
 
 def adjust_cart_view(request, id):
