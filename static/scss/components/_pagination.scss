@@ -1,0 +1,27 @@
+// styles for pagination
+
+.pagination {
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+
+    span {
+        background: $primary-color;
+        padding: 10px 15px;
+        border-radius: $default-border-radius;
+        box-shadow: $panel-shadow;
+
+        a {
+            &:hover {
+                i {
+                    color: lighten($black-color, 40%);
+                }
+            }
+        }
+
+        i {
+            color: $black-color;
+        }
+    }
+}
