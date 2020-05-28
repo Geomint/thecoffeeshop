@@ -1,14 +1,12 @@
 // profile page styles
 .profile {
     &__message {
-
         &__user {
             text-transform: capitalize;
         }
     }
 
     &__navigation {
-
         &__list {
             list-style: none;
 
@@ -50,6 +48,20 @@
 
         &__orders {
             display: none;
+
+            &__line-item {
+                margin-bottom: 20px;
+            }
+
+            &__total {
+                @include breakpoint(xs) {
+                    text-align: center;
+                }
+            }
+            
+            &__cta {
+                text-align: center;
+            }
         }
 
         &__product {
@@ -184,19 +196,20 @@
         &__orders {
             margin-bottom: 20px;
 
-            &__image {
+            &__panel {
+                padding: 20px;
+                background: $white-color;
+                border-radius: $default-border-radius;
+                box-shadow: $panel-shadow;
+                margin-bottom: 20px;
+            }
 
+            &__image {
                 img {
                     border-radius: $default-border-radius;
                     box-shadow: $panel-shadow;
                 }
             }
-
-            &__details {
-                
-            }
         }
-
-
     }
 }
