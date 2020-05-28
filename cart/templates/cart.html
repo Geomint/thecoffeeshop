@@ -18,11 +18,11 @@
                     alt="{{product.name}}">
             </div>
         </div>
-        <div class="col-7 col-md-8">
+        <div class="col-7 col-md-8 align align--center">
             <div class="cart__item__contents">
                 <h3>{{p.product.name}}</h3>
-                <p class="cart__item__contents__excerpt">EXCERPT WILL GO HERE</p>
-                <p class="cart__item__contents__rrp">£RRP</p>
+                <p class="cart__item__contents__excerpt">{{p.product.excerpt}}</p>
+                <p class="cart__item__contents__rrp">RRP: £{{p.product.recommended_retail_price}}</p>
                 <p class="cart__item__contents__price">£{{p.product.price}}</p>
             </div>
         </div>
