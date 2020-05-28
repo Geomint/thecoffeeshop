@@ -40,7 +40,7 @@ p {
         text-align: center;
         
         @include breakpoint(sm) {
-            padding-bottom: 5px;
+            padding-bottom: 15px;
         }
     }
 }
