@@ -79,7 +79,7 @@
 
             &__input {
                 margin-left: auto;
-            
+
                 input {
                     border-radius: $default-border-radius;
                     border: none;
@@ -120,8 +120,8 @@
                 }
 
                 &__submit {
-                   margin: auto;
-                   display: block;
+                    margin: auto;
+                    display: block;
                 }
             }
 
@@ -180,5 +180,23 @@
         &__close {
             color: $required-color !important;
         }
+
+        &__orders {
+            margin-bottom: 20px;
+
+            &__image {
+
+                img {
+                    border-radius: $default-border-radius;
+                    box-shadow: $panel-shadow;
+                }
+            }
+
+            &__details {
+                
+            }
+        }
+
+
     }
 }
