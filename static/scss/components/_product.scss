@@ -77,5 +77,20 @@
                 border-radius: 0 6px 6px 0;
             }
         }
+
+        &__description {
+            &__two {
+                display: none;
+            }
+        }
+
+        &__read {
+            color: $text-on-white-color;
+            padding: 0 2px;
+
+            &:hover {
+                color: darken($text-on-white-color, 10%);
+            }
+        }
     }
 }
