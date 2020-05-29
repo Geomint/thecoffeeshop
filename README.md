@@ -40,6 +40,8 @@
 ## User Experience: 👍
 
 ### Project Goals:
+<p>The goal of this project is to offer a wide range of coffee products be it ground coffee, coffee beans or even products & merchandise. The users on the website will be able to create an account, add any combination of items
+to a shopping basket, make payments and have their orders viewable on their profile dashboard panel.</p>
 
 ### Target Audience Goals:
 
