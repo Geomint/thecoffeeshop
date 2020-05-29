@@ -61,6 +61,15 @@ to a shopping basket, make payments and have their orders viewable on their prof
 
 ### User Stories:
 
+<p>Tim Says: "Ive been looking for a website for a while now that works just as well on my phone as it does my laptop, im far too busy to be sitting at my computer all day 
+so I need a site that I can use just as well on my phone."</p>
+
+<p>Mark Says: "Im often skeptical of purchasing on online sites, I like to know that I have a line of communication with the company im paying with just incase there would be an issue
+at some point down the line with the order."</p>
+
+<p>Gabe Says: "Shopping on an e-commerce website has got to be easy, if you flood the user with too much choice you can cause them to panic and potentially leave the site and go elsewhere,
+make it easy for the user to choose which items they want and buy them, simple!"</p>
+
 ### User Requirements and Expectations:
 
 #### Requirements:
