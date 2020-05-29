@@ -71,6 +71,8 @@ at some point down the line with the order."</p>
 make it easy for the user to choose which items they want and buy them, simple!"</p>
 
 ### User Requirements and Expectations:
+<p>When it comes to shopping on the web, users need to feel safe & comfortable in order for them to actually go through with purchases online, therefore providing the best UX, proper authentication
+and using secure payment gateways (in this case Stripe) is necessary to offer the best solution.</p>
 
 #### Requirements:
 
