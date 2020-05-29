@@ -3,7 +3,7 @@
 <img src=""></img>
 ** insert device screenshot **
 
-** introduction **
+<p>Welcome to The Coffee Shop☕️ this e-commerce website was developed by George Pyott as the final milestone project on the Code Institute Full-Stack web developer course. This website is aimed at users who wish to purchase a wide variety of different coffee flavours, blends and grinds that are available. If you would like to reach out to me please use my GitHub contact details.</p>
 
 ## Contents: 
 
