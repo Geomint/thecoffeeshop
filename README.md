@@ -100,6 +100,9 @@ and using secure payment gateways (in this case Stripe) is necessary to offer th
 <p>I chose to use Montserrat as the main font family for this website as it provides an elegant & clean style for text and titles. In the essence of keeping the layout clean to encourage user sales, I decided to go with this font.</p>
 
 ### Icons:
+
+<p>Thanks to the excellent collection of icons over at font-awesome, selecting icons to use for The Coffee Shop was really simple, I decided to go with typical icons for the 'icon-navigation' section of the navbar, the cart, the user icon and the burger button, as well as using various other intutitive icons across the project. I use icons in place of link text across the site where possible to provide the best UX possible to the user.</p>
+
 ### Colours:
 
 ### Base Styles:
