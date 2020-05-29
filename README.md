@@ -106,6 +106,16 @@ and using secure payment gateways (in this case Stripe) is necessary to offer th
 ### Colours:
 <p>The colours I chose to use for this website compliment the rustic tones of a coffee shop, having a visually appealing contrast provides a more elegant user experience for those on the website, below is the list of colours the website uses.</p>
 
+- Primary: #b2e4c8; "Fringy Flower" - This pastel green colour provides an elegant & efficient contrast for the strong brown colour.
+- Secondary: #58493c; "Kabul" - This strong brown colour is used across the site in the layout, for instance the header and footer, this defines the page well and indicates where the user focus should be.
+- Tertiary: #f1e2d0; "Almond" - This lighter brown colour provides a subtle alternative to the stronger brown and can be used to highlight various elements within the website. 
+- White Colour: #ffffff; "White" - This is the standard white colour on the website.
+- Off White Colour: #f2f2f2; "Concrete" - This off white colour provides sufficient layout differences between the white page background.
+- Black Colour: #000; "Black" - This is the standard black colour on the website.
+- Required Colour: #ff0000; "Required" - This is the standard red colour to be used for required symbols.
+- Error Colour: #cc0000; "Guardsman Red" - This is the standard red colour to be used to indicate errors, it is a somewhat stronger red than the last to indicate to the user that something has gone wrong.
+- Success Colour: #25bd2c; "Success" - This is the standard green colour to be used to indicate successful interactions on the website.
+
 ### Base Styles:
 
 Colours:
