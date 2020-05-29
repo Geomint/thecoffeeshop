@@ -97,9 +97,7 @@ and using secure payment gateways (in this case Stripe) is necessary to offer th
 
 ### Fonts:
 
-#### Heading-font:
-
-#### Content-font: 
+<p>I chose to use Montserrat as the main font family for this website as it provides an elegant & clean style for text and titles. In the essence of keeping the layout clean to encourage user sales, I decided to go with this font.</p>
 
 ### Icons:
 ### Colours:
