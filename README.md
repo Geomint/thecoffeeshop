@@ -104,6 +104,7 @@ and using secure payment gateways (in this case Stripe) is necessary to offer th
 <p>Thanks to the excellent collection of icons over at font-awesome, selecting icons to use for The Coffee Shop was really simple, I decided to go with typical icons for the 'icon-navigation' section of the navbar, the cart, the user icon and the burger button, as well as using various other intutitive icons across the project. I use icons in place of link text across the site where possible to provide the best UX possible to the user.</p>
 
 ### Colours:
+<p>The colours I chose to use for this website compliment the rustic tones of a coffee shop, having a visually appealing contrast provides a more elegant user experience for those on the website, below is the list of colours the website uses.</p>
 
 ### Base Styles:
 
