@@ -45,6 +45,13 @@ to a shopping basket, make payments and have their orders viewable on their prof
 
 ### Target Audience Goals:
 
+* Browse various coffee products and be offered information about that product.
+* Purchase products shown on the webstore.
+* Create an account to track orders and purchase items on the webstore.
+* A visually appealing and intuitive design.
+* A website that is navigable on any device (mobile/tablet/desktop).
+* Track orders made via profile dashboard.
+
 ### Site Owner Goals:
 
 ### User Stories:
