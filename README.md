@@ -106,15 +106,16 @@ and using secure payment gateways (in this case Stripe) is necessary to offer th
 ### Colours:
 <p>The colours I chose to use for this website compliment the rustic tones of a coffee shop, having a visually appealing contrast provides a more elegant user experience for those on the website, below is the list of colours the website uses.</p>
 
-- Primary: #b2e4c8; "Fringy Flower" - This pastel green colour provides an elegant & efficient contrast for the strong brown colour.
-- Secondary: #58493c; "Kabul" - This strong brown colour is used across the site in the layout, for instance the header and footer, this defines the page well and indicates where the user focus should be.
-- Tertiary: #f1e2d0; "Almond" - This lighter brown colour provides a subtle alternative to the stronger brown and can be used to highlight various elements within the website. 
-- White Colour: #ffffff; "White" - This is the standard white colour on the website.
-- Off White Colour: #f2f2f2; "Concrete" - This off white colour provides sufficient layout differences between the white page background.
-- Black Colour: #000; "Black" - This is the standard black colour on the website.
-- Required Colour: #ff0000; "Required" - This is the standard red colour to be used for required symbols.
-- Error Colour: #cc0000; "Guardsman Red" - This is the standard red colour to be used to indicate errors, it is a somewhat stronger red than the last to indicate to the user that something has gone wrong.
-- Success Colour: #25bd2c; "Success" - This is the standard green colour to be used to indicate successful interactions on the website.
+- ![#b2e4c8](https://placehold.it/15/b2e4c8/000000?text=+) Primary: #b2e4c8; "Fringy Flower" - This pastel green colour provides an elegant & efficient contrast for the strong brown colour.
+- ![#58493c](https://placehold.it/15/58493c/000000?text=+) Secondary: #58493c; "Kabul" - This strong brown colour is used across the site in the layout, for instance the header and footer, this defines the page well and indicates where the user focus should be.
+- ![#f1e2d0](https://placehold.it/15/f1e2d0/000000?text=+) Tertiary: #f1e2d0; "Almond" - This lighter brown colour provides a subtle alternative to the stronger brown and can be used to highlight various elements within the website. 
+- ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) White Colour: #ffffff; "White" - This is the standard white colour on the website.
+- ![#f2f2f2](https://placehold.it/15/f2f2f2/000000?text=+) Off White Colour: #f2f2f2; "Concrete" - This off white colour provides sufficient layout differences between the white page background.
+- ![#017735](https://placehold.it/15/017735/000000?text=+) Text On White Colour: #017735; "Fun Green" - This is a somewhat darker variation of the primary colour to be used when text is positioned on a white background.
+- ![#000](https://placehold.it/15/b2e4c8/000000?text=+) Black Colour: #000; "Black" - This is the standard black colour on the website.
+- ![#ff0000](https://placehold.it/15/ff0000/000000?text=+) Required Colour: #ff0000; "Required" - This is the standard red colour to be used for required symbols.
+- ![#cc0000](https://placehold.it/15/cc0000/000000?text=+) Error Colour: #cc0000; "Guardsman Red" - This is the standard red colour to be used to indicate errors, it is a somewhat stronger red than the last to indicate to the user that something has gone wrong.
+- ![#25bd2c](https://placehold.it/15/25bd2c/000000?text=+) Success Colour: #25bd2c; "Success" - This is the standard green colour to be used to indicate successful interactions on the website.
 
 ### Base Styles:
 
