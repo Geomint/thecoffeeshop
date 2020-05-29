@@ -93,6 +93,7 @@ and using secure payment gateways (in this case Stripe) is necessary to offer th
 * The Website will be navigable with ease.
 
 ## Design Choices: 🎨
+<p>I wanted the design of this website to reflect the rustic feel of a family run coffee shop, the pastel colours and various brown colours compliment the imagery used across the site.</p>
 
 ### Fonts:
 
