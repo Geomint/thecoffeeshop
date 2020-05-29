@@ -76,6 +76,14 @@ and using secure payment gateways (in this case Stripe) is necessary to offer th
 
 #### Requirements:
 
+* Interact with a visually appealing and intuitive website.
+* Navigate the website on any device, with ease.
+* Consume information about various coffee types and about the brand.
+* Add products to a shopping cart & update the cart quantities.
+* Purchase products in the shopping cart in a safe and secure way.
+* View orders in profile dashboard section.
+* Can reach out to the business via email if needed.
+
 #### Expectations:
 
 ## Design Choices: 🎨
