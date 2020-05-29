@@ -54,6 +54,11 @@ to a shopping basket, make payments and have their orders viewable on their prof
 
 ### Site Owner Goals:
 
+* Provide users with a safe and secure e-commerce platform in order to generate revenue from sales.
+* Encourage user sales with promotions and discounts.
+* Build awareness for the brand and attract coffee suppliers.
+* Collect user session data for market research purposes.
+
 ### User Stories:
 
 ### User Requirements and Expectations:
