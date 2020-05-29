@@ -86,6 +86,12 @@ and using secure payment gateways (in this case Stripe) is necessary to offer th
 
 #### Expectations:
 
+* The Website will ensure safe storage of user details.
+* The users payment information will not be stored in the website's database.
+* The Website will load with sufficient speed.
+* The Content on the website will be dynamic for any device.
+* The Website will be navigable with ease.
+
 ## Design Choices: 🎨
 
 ### Fonts:
