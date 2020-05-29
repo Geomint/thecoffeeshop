@@ -35,3 +35,10 @@ readLess.on('click', function () {
     readMore.show(speed);
     return false;
 });
+
+const orderForm = $("#payment-form");
+const orderPay = $("#pay");
+
+orderPay.on('click', function (){
+    orderForm.submit();
+})
