@@ -68,7 +68,6 @@
                             {{ payment_form.stripe_id }}
                         </div>
                     </div>
-                    <button type="submit" name="commit" id="sumbit_payment_button" class="btn btn--primary">Pay</button>
                 </form>
             </div>
         </div>
@@ -92,7 +91,7 @@
                 <div class="col-12">
                     <div class="checkout__total">
                         <p>Order Total: {{ total }}</p>
-                        <a class="btn btn--primary" href="/">Make Payment</a>
+                        <a class="btn btn--primary" id="pay" href="#">Make Payment</a>
                     </div>
                 </div>
             </section>
