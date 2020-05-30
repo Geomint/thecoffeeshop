@@ -119,9 +119,48 @@ and using secure payment gateways (in this case Stripe) is necessary to offer th
 
 ### Base Styles:
 
-Colours:
+TheCoffeeShop Colours: 
+
+```scss
+$primary-color: #b2e4c8; // primary
+$secondary-color: #58493c; // secondary
+$tertiary-color: #f1e2d0; // tertiary 
+$white-color: #ffffff; // white
+$off-white-color: #f2f2f2; // off-white
+$black-color: #000; // black
+$required-color: #ff0000; // required-red
+$error-color: #cc0000; // error-red
+$success-color: #25bd2c; // success-green
+```
+
+Layout Colours:
+
+```scss
+$text-on-white-color: #017735;
+$main-nav-color: $secondary-color;
+$main-footer-color: $secondary-color;
+$main-background-color: $white-color;
+$main-panel-color: darken($off-white-color, 5%);
+```
+
 Shadows:
-Transitions:
+
+```scss
+$panel-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+$text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+```
+
+Transitions: 
+```scss
+$fast-transition: 0.25s all ease-in-out;
+$slow-transition: 0.5s all ease-in-out;
+```
+
+Borders: 
+
+```scss
+$default-border-radius: 6px;
+```
 
 ### Images:
 
