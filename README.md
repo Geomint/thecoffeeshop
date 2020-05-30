@@ -165,11 +165,11 @@ $default-border-radius: 6px;
 ### Images:
 <p>The images used across the website have been sourced from royalty free image website such as <a href="https://unsplash.com/">this</a>. The images are related to coffee in some way be it baristas, coffee displays or even ground coffee. This helps to provide lifestyle imagery to the user and potentially entice them into making a purchase.</p>
 
-### Background Images:
-
-
 ## Wireframes/Flowcharts: 🔧
- 
+<p>I used <a href="https://www.sketch.com/">Sketch</a> to develop the wireframes for The Coffee Shop website, this seemless tool allowed me to easily make a wireframe for each page aswell as a wireframe for each device. I could then easily export them via the tool to .png files in order to save to the project.</p> 
+
+<p>The wireframes for this project can be seen <a href="https://github.com/Geomint/thecofffeeshop/tree/master/wireframes">here</a></p>
+
 ### Account Creation Flowchart:
 
 ### Database Design:
