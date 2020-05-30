@@ -163,6 +163,7 @@ $default-border-radius: 6px;
 ```
 
 ### Images:
+<p>The images used across the website have been sourced from royalty free image website such as <a href="https://unsplash.com/">this</a>. The images are related to coffee in some way be it baristas, coffee displays or even ground coffee. This helps to provide lifestyle imagery to the user and potentially entice them into making a purchase.</p>
 
 ### Background Images:
 
@@ -250,6 +251,7 @@ $default-border-radius: 6px;
 * <a href="https://coolors.co/">Coolors.co</a>
 * <a href="https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB">Unicorn Revealer</a>
 * <a href="https://hatchful.shopify.com/">Logo Design</a>
+* <a href="https://unsplash.com/">Unsplash - Royalty Free Images</a>
 
 
 ## Disclaimer
