@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from checkout.models import Order, OrderItem
-from .forms import RegisterNewUserForm, LoginUserForm, UpdateUserDetailsForm, UploadProductForm
+from .forms import RegisterNewUserForm, LoginUserForm, UpdateUserDetailsForm
 
 # Create your views here.
 
@@ -85,21 +85,3 @@ def account_profile_view(request):
 
     return render(request, 'profile_page.html', {"profile": user, "update_form": update_form, "all_orders": all_orders})
 
-
-@login_required
-def upload_product_view(request):
-    """
-    A view that allows users flagged as staff or admin to upload products from profile page
-    """
-    user = User.objects.get(email=request.user.email)
-    if request.method == 'POST':
-        product_upload = UploadProductForm(request.POST, instance=request.user)
-        if product_upload.is_valid():
-            product_upload.save()
-            messages.success(
-                request, 'You have successfully uploaded this product.')
-            return redirect('profile')
-    else:
-        product_upload = UploadProductForm(instance=request.user)
-
-    return render(request, 'profile_page.html', {"profile": user, "product_upload": product_upload})
