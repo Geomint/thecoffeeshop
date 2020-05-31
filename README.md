@@ -355,12 +355,28 @@ I had to build a context.py file within the cart app and include this within the
 
 - <strong>Test</strong> 🧪: 
 To test these cart features I had to do the following:
-* 1: Navigate to the product list page and click through to a product detail view page, then I attempted to add 2 of the item to the cart.
-* 2: Wait to see if the returned page was the cart.html page with 2 lots of the product I had just added.
-* 3: Edit the quantity of the items in the cart to 1 and update the cart.
+* * 1: Navigate to the product list page and click through to a product detail view page, then I attempted to add 2 of the item to the cart.
+* * 2: Wait to see if the returned page was the cart.html page with 2 lots of the product I had just added.
+* * 3: Edit the quantity of the items in the cart to 1 and update the cart.
 
 - <strong>Result</strong> 🏆: 
 The website correctly added 2 of the clicked products to the cart session, and the cart.html page was rendered with those items in. Upon editing the quantity of the item to 1 and hitting submit, the cart page was reloaded with just 1 of the item not remaining in the cart.
+
+- <strong>Verdict</strong> ✅: 
+This test passed based on the above criteria and information.
+
+<strong>Checkout (using the STRIPE API)</strong>
+- <strong>Plan</strong> 📝: 
+Being able to checkout products on an e-commerce is also a must, infact its a requirement, and users have a full expectation that the website they are using will handle their sensitive information with care and conform to the legal guidelines. This feature needed to work seemlessly so that the user is informed as much as possible during the payment process.
+
+- <strong>Implementation</strong> 🏭: 
+Using the course material supplied by <a href="https://codeinstitute.net/">Code Institute</a> aswell as the Django & stripe documentation, I first constructed the Order and OrderItem models in the checkout app and peformed the migrations to setup the tables in the database. From there I could create the views and forms needed to allow the customer to input their details and process and order. Once these had been built, I setup the validation required by STRIPE in the stripe.js file to handle the creation of the stripe_id, which is required in order to process a payment with the API.
+
+- <strong>Test</strong> 🧪: 
+To test the checkout feature, I first needed to add a selection of products to the cart and head over to the checkout.html page, I then entered dummy contact information and used stripe test card details (which can be found <a href="https://stripe.com/docs/testing">here</a>) to attempt to create a purchase, I also tested this feature with incorrect payment information in order to check that the error messages were visible, clear and in a good place for the user to see so that they are informed throughout the process.
+
+- <strong>Result</strong> 🏆: 
+The payment was processed and using the stripe dashboard I could see that stripe had processed a dummy payment for the products that were in the cart.
 
 - <strong>Verdict</strong> ✅: 
 This test passed based on the above criteria and information.
