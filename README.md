@@ -199,6 +199,15 @@ $default-border-radius: 6px;
 * <a href="https://kenwheeler.github.io/slick/">Slick Carousel</a>
 * <a href="https://sass-lang.com/">SASS/SCSS</a>
 * <a href="https://tinypng.com/">TinyPng (image compression)</a>
+* <a href="https://sweetalert2.github.io/">Sweetalert2</a>
+* <a href="https://pip.pypa.io/en/stable/installing/">PIP</a>
+* <a href="http://whitenoise.evans.io/en/stable/">WhiteNoise</a>
+* <a href="https://pypi.org/project/psycopg2/">Psycopg2</a>
+* <a href="https://pypi.org/project/gunicorn/">Gunicorn</a>
+* <a href="https://stripe.com/">Stripe</a>
+* <a href="https://www.djangoproject.com/">Django</a>
+* <a href="https://code.visualstudio.com/">Visual Studio Code</a>
+* <a href="https://sendgrid.com/">Sendgrid</a>
 
 #### Databases:
 
