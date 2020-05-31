@@ -85,6 +85,7 @@
                 {% if all_orders != 0 %}
                 {% for order in all_orders %}
                 <div class="profile__dashboard__orders__panel">
+                    <h5>Order ID: {{order.order}}</h5>
                     {% for order_item in order.order_items %}
                     <section class="row profile__dashboard__orders__line-item">
                         <div class="col-md-4 col-5">
