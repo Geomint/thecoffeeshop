@@ -82,7 +82,7 @@
         <div class="col-md-8 col-12 profile__dashboard__orders">
             <div class="profile__dashboard">
                 <h2 class="profile__dashboard__title">Your Orders</h2>
-                {% if all_orders > 0 %}
+                {% if all_orders %}
                 {% for order in all_orders %}
                 <div class="profile__dashboard__orders__panel">
                     <h5>Order ID: {{order.order}}</h5>
