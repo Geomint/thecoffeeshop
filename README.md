@@ -302,7 +302,7 @@ EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
 EMAIL_PORT = <ports_here>
 EMAIL_USE_TLS = True
 ``` 
-in order to access the sendgrid API. From within the dashboard of sendgrid I had to set up a verified sender in order to allow messages to be sent in from the form. There are 3 cname records that need to be set at the Domain level in order to allow any sender email to be inputted into the contact form, this exceeded the scope of the requirements for the project as I dont have access to a domain for TheCoffeeShop, just what heroku provided, therefore the only sender email currently available to use on the contact form is "george.pyott@googlemail.com".
+- in order to access the sendgrid API. From within the dashboard of sendgrid I had to set up a verified sender in order to allow messages to be sent in from the form. There are 3 cname records that need to be set at the Domain level in order to allow any sender email to be inputted into the contact form, this exceeded the scope of the requirements for the project as I dont have access to a domain for TheCoffeeShop, just what heroku provided, therefore the only sender email currently available to use on the contact form is "george.pyott@googlemail.com".
 
 - <strong>Test</strong> 🧪: 
 To test this feature I had to ensure that the above settings were correct in the settings.py file, and input a dummy message into the contact form making sure that the email is 'george.pyott@googlemail.com'.
@@ -328,6 +328,22 @@ All products within the database were correctly rendered to the 'products.html' 
 
 - <strong>Verdict</strong> ✅: 
 This test has passed based on the above information and criteria.
+
+<strong>Product View Page (detailed view)</strong>
+- <strong>Plan</strong> 📝: 
+Aswell as having a product list view where the user can see a list of all the products currently in the database, I wanted to include a product detail page, that ther user could navigate to and read more information about the clicked product, further on in production this would allow the business to include more detail about the product, the brand and any other information on this page too. This would be the page that the user makes the final decision, and add to the cart a specified quantity.
+
+- <strong>Implementation</strong> 🏭: 
+Passing in the primary Key of the product (primary key in the database), via the URL meant that I could select the product from the database when the product is clicked by the user, this allowed me to build up a page with ONLY the product the user had clicked on.
+
+- <strong>Test</strong> 🧪: 
+To test this feature I had to navigate to the product list page and click on any of the products available, once the page had loaded and the product information was there, I checked the url to see what ID the website had taken to me, comparing this to what information was in the database.
+
+- <strong>Result</strong> 🏆: 
+The page rendered accuratley with the previously clicked product information, I could then interact with the elements on the page to find out more about the product and add the item to a cart.
+
+- <strong>Verdict</strong> ✅: 
+This test passed based on the above criteria and information.
 
 
 ## Bugs 🐞
