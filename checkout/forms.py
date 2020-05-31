@@ -20,6 +20,10 @@ class PaymentForm(forms.Form):
 
 
 class OrderForm(forms.ModelForm):
+
+    address_line_2 = forms.CharField(required=False)
+    phone_number = forms.IntegerField()
+
     class Meta:
         model = Order
         fields = [
