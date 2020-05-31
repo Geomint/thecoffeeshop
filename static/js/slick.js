@@ -1,3 +1,4 @@
+// latest-products carousel using slick
 $('.home__latest-products__slick').slick({
     infinite: true,
     slidesToShow: 4,
