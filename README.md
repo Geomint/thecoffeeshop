@@ -413,6 +413,22 @@ When I navigated to the orders section, I could see that the order I had previou
 - <strong>Verdict</strong> ✅: 
 This test passed based on the above criteria and information.
 
+<strong>Search Bar</strong>
+- <strong>Plan</strong> 📝: 
+I wanted to develop an intuitive search feature for the website, so that the user could search for products based on a custom string. This is often an expected feature in e-commerce sites in the modern day so was quite high in terms of importance on my list of features to develop. 
+
+- <strong>Implementation</strong> 🏭: 
+I developed a view in the search app that fetches a product based on the query that is collected by the search form. The product(s) if there are multiple are then returned to the HTML so that the user can see what items are returned on their query, I used an if statement to return a 'no-results' page with the passed query so that the user can see there were no products returned for that query.
+
+- <strong>Test</strong> 🧪: 
+To test the search function I had to input various search queries into the search bar and hit enter, I intentionally searched for products I knew existed and also typed in queries that would not return products.
+
+- <strong>Result</strong> 🏆: 
+When searching for "coffee" all 7 products returned as at the time of performing this test all the products in the database had the name value of "Coffer (number)". When searching for "Lion" or "Gazelle", the 'no-results.html' page was rendered and I could see that the website was not able to serve any products based on those queries.
+
+- <strong>Verdict</strong> ✅: 
+This test passed based on the above criteria and information.
+
 
 ## Bugs 🐞
 
