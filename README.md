@@ -172,6 +172,8 @@ $default-border-radius: 6px;
 
 ### Account Creation Flowchart:
 
+<p>The account creation flowchart for this project can be viewed here <a href="https://github.com/Geomint/thecofffeeshop/tree/master/wireframes/account_auth_flowchart.png">here</a></p>
+
 ### Database Design:
 
 ## Features: 🎡
@@ -197,10 +199,11 @@ $default-border-radius: 6px;
 * <a href="https://kenwheeler.github.io/slick/">Slick Carousel</a>
 * <a href="https://sass-lang.com/">SASS/SCSS</a>
 * <a href="https://tinypng.com/">TinyPng (image compression)</a>
-* <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a>
-* <a href="https://pymongo.readthedocs.io/en/stable/">PyMongo</a>
-* <a href="https://flask.palletsprojects.com/en/1.0.x/">Flask</a>
-* <a href="https://jinja.palletsprojects.com/en/2.10.x/">Jinja</a>
+
+#### Databases:
+
+* <a href="https://www.postgresql.org/">PostgreSQL - Production</a>
+* <a href="https://www.sqlite.org/index.html">SQlite3 - Development</a>
 
 ## Planning:  + Testing: ✏️ 🔌
 
@@ -252,7 +255,8 @@ $default-border-radius: 6px;
 * <a href="https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB">Unicorn Revealer</a>
 * <a href="https://hatchful.shopify.com/">Logo Design</a>
 * <a href="https://unsplash.com/">Unsplash - Royalty Free Images</a>
-
+* <a href="https://www.shopcoffee.co.uk/">Coffee Images & Content</a>
+* <a href="https://ironandfire.co.uk/">Coffee Images & Content</a>
 
 ## Disclaimer
 The contents of this website are for educational purposes only.
