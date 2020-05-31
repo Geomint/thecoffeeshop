@@ -333,7 +333,63 @@ Before starting make sure you have the following:
 
 ## Instructions:
 
-<em>WARNING: You may need to follow a different guide based on the OS you are using, read more here.</em>
+<em>WARNING: You may need to follow a different guide based on the OS you are using, read more <a href="https://python.readthedocs.io/en/latest/library/venv.html">here.</a></em>
+
+
+* 1: <strong>Clone</strong> TheCoffeeShop repository by either downloading from <a href="https://github.com/Geomint/thecoffeeshop">here</a> or type the following command into your terminal.
+```bash
+git clone https://github.com/geomint/thecoffeeshop
+```
+* 2: <strong>Navigate</strong> to this folder in your terminal.
+* 3: <strong>Enter</strong> the following command into your terminal.
+```bash
+python3 -m .venv venv
+```
+* 4: <strong>Initialize</strong> the environment by using the following command.
+```bash
+.venv\bin\activate
+```
+
+* 5: <strong>Install</strong> the requirements and dependancies from the requirements.txt file
+```bash
+pip3 -r requirements.txt
+```
+
+* 6: Within your IDE now <strong>create</strong> a file where you can store your secret information for the app, I used vscodes settings.json however you can just create an env.py file if you wish.
+
+```bash
+{
+    "python.pythonPath": "/usr/local/bin/python3",
+    "python.terminal.activateEnvironment": true,
+    "python.linting.enabled": true,
+    "files.autoSave": "onFocusChange",
+    "files.useExperimentalFileWatcher": true,
+    "terminal.integrated.env.osx": {
+      "SECRET_KEY": "<your_secret_key_here>",
+      "DEV": "1",
+      "SENDGRID_API_KEY": "<your_sendgrid_api_key_here>",
+      "STRIPE_PUBLISHABLE": "<your_stripe_publishable_key_here>",
+      "STRIPE_SECRET": "<your_stripe_secret_key_here>",
+      "DATABASE_URL": "<your_database_url_here>",
+}
+```
+
+* 7: <strong>Enter</strong> the following command into the terminal to migrate models into database.
+```bash
+python3 manage.py migrate
+```
+
+* 8: Then you need to <strong>Create</strong> a 'superuser' for the project using the terminal, enter the following command.
+```bash
+python3 manage.py createsuperuser
+```
+
+* 9: The app can now be ran locally using the following command.
+```bash
+python3 manage.py runserver
+```
+
+Congratulations, The Coffee Shop is now running locally on your machine! Happy Coding!
 
 ### Deploying The Coffee Shop to Heroku:
 
