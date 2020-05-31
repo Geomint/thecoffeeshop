@@ -5,6 +5,8 @@ const productNavButton = $('.profile__navigation__link__product-upload');
 const accountPanel = $('.profile__dashboard__account');
 const ordersPanel = $('.profile__dashboard__orders');
 const productPanel = $('.profile__dashboard__product');
+const editProfileTrigger = $('.edit-profile-trigger');
+const editProfileClose = $('.edit-profile-close');
 
 accountNavButton.on('click', function(){
     accountPanel.show();
@@ -27,9 +29,6 @@ productNavButton.on('click', function(){
     return false;
 });
 
-const editProfileTrigger = $('.edit-profile-trigger');
-const editProfileClose = $('.edit-profile-close');
-
 editProfileTrigger.on('click', function(){
     $('#edit-details-form').addClass('profile__dashboard__edit__form__show');
     editProfileTrigger.hide();
@@ -42,4 +41,4 @@ editProfileClose.on('click', function(){
     editProfileTrigger.show();
     editProfileClose.addClass('profile__dashboard__edit__close');
     return false;
-})
+});
