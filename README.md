@@ -393,6 +393,33 @@ Congratulations, The Coffee Shop is now running locally on your machine! Happy C
 
 ### Deploying The Coffee Shop to Heroku:
 
+* 1: <strong>Create</strong> a requirements.txt file using the following command.
+```bash
+pip3 freeze > requirements.txt
+```
+
+* 2: <strong>Create</strong> a procfile with the following command.
+```bash
+echo web: python3 app.py > Procfile
+```
+* 3: Push these newly created files to your repository.
+* 4: Create a new app for this project on the Heroku Dashboard.
+* 5: Select your deployment method by clicking on the deployment method button and select GitHub.
+* 6: On the dashboard, set the following config variables:
+
+**Key**|**Value**
+:-----:|:-----:
+DATABASE\_URL|<your\_database\_url>
+SECRET\_KEY|<your\_secret\_key>
+SENDGRID\_API\_KEY|<your\_sendgrid\_api\_key>
+STRIPE\_PUBLISHABLE|<your\_stripe\_publishable\_key>
+STRIPE\_SECRET|<your\_stripe\_secret\_key>
+
+* 7: <strong>Click</strong> the deploy button on the heroku Dashboard.
+* 8: Wait for the build to finish and click the view project link once it has!
+
+Congratulations, The Coffee Shop is now hosted on Heroku and is live!
+
 ## Credits 💳
 
 * <a href="https://medium.com/developing-with-sass/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740">Mixin For Breakpoints</a>
