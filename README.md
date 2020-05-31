@@ -429,6 +429,22 @@ When searching for "coffee" all 7 products returned as at the time of performing
 - <strong>Verdict</strong> ✅: 
 This test passed based on the above criteria and information.
 
+<strong>User Authentication (register, login, logout)</strong>
+- <strong>Plan</strong> 📝: 
+Its important on any e-commerce website to allow users to create an account, login and logout, so that they can view relevant information to do with their account and any orders they may have placed. Using the django.auth settings this feature would be heavily supported by the existing functionality that comes with django out of the box.
+
+- <strong>Implementation</strong> 🏭: 
+The user table exists in django as standard, So all I had to do was construct the forms and views in order to allow the user to register an account, login to their account and logout from their account.
+
+- <strong>Test</strong> 🧪: 
+To test the User features I had to perform each view step by step, First I Created a 'test-account' and checked that the records had been added to the database, Then I attempted a login to the website using those details, after that I logged out of the account using the logout view.
+
+- <strong>Result</strong> 🏆: 
+The 'test-account' I had created was visible in the database, and when I attempted to login to the account I was redirected to the profile page where I was greeted by a personalized welcome back message. Finally logging out cleared my session and meant that I would have to log back into the test-account to return to the profile page.
+
+- <strong>Verdict</strong> ✅: 
+This test passed based on the above criteria and information.
+
 
 ## Bugs 🐞
 
