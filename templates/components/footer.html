@@ -7,10 +7,10 @@
                     <div class="footer__nav__group">
                         <h4 class="footer__nav__group__header">The Coffee Shop</h4>
                         <ul class="footer__nav__group__list">
-                            <li class="footer__nav__group__list__item"><a href="{% url 'home' %}">Home</a></li>
-                            <li class="footer__nav__group__list__item"><a href="/products">Shop</a></li>
-                            <li class="footer__nav__group__list__item"><a href="{% url 'about' %}">About Us</a></li>
-                            <li class="footer__nav__group__list__item"><a href="{% url 'contact' %}">Contact Us</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="home" href="{% url 'home' %}">Home</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="shop" href="/products">Shop</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="about-us" href="{% url 'about' %}">About Us</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="contact-us" href="{% url 'contact' %}">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -19,19 +19,19 @@
                         <h4 class="footer__nav__group__header">Account</h4>
                         <ul class="footer__nav__group__list">
                             {% if user.is_authenticated %}
-                            <li class="footer__nav__group__list__item"><a href="{% url 'profile' %}">My Profile</a></li>
-                            <li class="footer__nav__group__list__item"><a href="{% url 'logout' %}">Sign Out</a></li>
-                            <li class="footer__nav__group__list__item"><a href="{% url 'cart' %}">Your Cart</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="my profile" href="{% url 'profile' %}">My Profile</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="sign out" href="{% url 'logout' %}">Sign Out</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="your cart" href="{% url 'cart' %}">Your Cart</a></li>
                             {% else %}
-                            <li class="footer__nav__group__list__item"><a href="{% url 'register' %}">Register</a></li>
-                            <li class="footer__nav__group__list__item"><a href="{% url 'login' %}">Sign In</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="register" href="{% url 'register' %}">Register</a></li>
+                            <li class="footer__nav__group__list__item"><a aria-label="sign in" href="{% url 'login' %}">Sign In</a></li>
                             {% endif %}
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4 offset-md-2 col-sm-12">
                     <div class="footer__message">
-                        <a href="/">
+                        <a aria-label="home" href="/">
                             <img class="logo" src="/static/images/logo/logo-sm.png" alt="The Coffee Shop Logo">
                         </a>
                         <p>Thankyou for visiting The Coffee Shop, this site was developed by George Pyott</p>
