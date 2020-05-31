@@ -313,16 +313,21 @@ Using the dashboard that SendGrid provides, I could see that the email had been 
 - <strong>Verdict</strong> ✅: 
 Whilst this feature works in the scope of the project criteria, In the future if The Coffee Shop were deployed to a none Heroku domain, I would add the necessary records to the DNS so that any email could be used as a registered sender.
 
-<strong></strong>
+<strong>Product List Page</strong>
 - <strong>Plan</strong> 📝: 
+An e-commerce site always needs a product list page so that the users can browse through the selection of products the business has to offer, therefore a large portion of planning went into this page in terms of have the correct layout in order to provide the best user experience possible. I wanted to include a level of pagination to this page so that the site could have a vast array of products without making the main product list page load times too long.
 
 - <strong>Implementation</strong> 🏭: 
+Once I had setup the product model and migrate the table into the database, I could then create the view within the products app that sends a GET request to the database and returns all the products into the products variable, making this available to the front end via the context in the return statement meant that I could loop through each product from the database and render the details using Djangos template language in the HTML. Using the paginator tool from django I was able to simply set how many products I wanted to show per page and render the pagination buttons in the HTML.
 
 - <strong>Test</strong> 🧪: 
+To test that this feature worked, I navigated to the 'products.html' page and looked to see if all the products in the database had been rendered into the HTML, I added enough products so that the paginator would fire, 7 to be precise as the paginator will only show 6 per page.
 
 - <strong>Result</strong> 🏆: 
+All products within the database were correctly rendered to the 'products.html' page, and the paginator correctly takes the user to the next page showing the 7th product.
 
 - <strong>Verdict</strong> ✅: 
+This test has passed based on the above information and criteria.
 
 
 ## Bugs 🐞
