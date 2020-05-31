@@ -25,12 +25,6 @@
                         <li class="profile__navigation__list__item"><i class="fas fa-fw fa-shopping-basket"></i>My
                             Orders</li>
                     </a>
-                    {% if user.is_staff %}
-                    <a class="profile__navigation__link__product-upload" href="#">
-                        <li class="profile__navigation__list__item"><i class="fas fa-fw fa-upload"></i>Upload a Product
-                        </li>
-                    </a>
-                    {% endif %}
                     <a href="/accounts/logout">
                         <li class="profile__navigation__list__item"><i class="fas fa-fw fa-sign-out-alt"></i>Log Out
                         </li>
@@ -128,42 +122,6 @@
                     <a class="btn btn--primary" href="/products">Shop Now</a>
                 </div>
                 {% endif %}
-            </div>
-        </div>
-        <!-- product upload panel -->
-        <div class="col-md-8 col-12 profile__dashboard__product">
-            <div class="profile__dashboard">
-                <h2 class="profile__dashboard__title">Upload A Product</h2>
-                <form class="profile__dashboard__product__form" method="POST" action="{% url 'profile' %}">
-                    {% csrf_token %}
-                    <div class="profile__dashboard__group__product">
-                        <label for="name">Product Name</label>
-                        {{product_upload_form.name}}
-                    </div>
-
-                    <div class="profile__dashboard__group__product">
-                        <label for="grind-size">Grind Size</label>
-                        {{product_upload_form.grind_size}}
-                    </div>
-
-                    <div class="profile__dashboard__group__product">
-                        <label for="description">Description</label>
-                        {{product_upload_form.description}}
-                    </div>
-
-                    <div class="profile__dashboard__group__product">
-                        <label for="name">Image</label>
-                        {{product_upload_form.image}}
-                    </div>
-
-                    <div class="profile__dashboard__group__product">
-                        <label for="name">Price</label>
-                        {{product_upload_form.price}}
-                    </div>
-
-                    <button class="profile__dashboard__group__product__submit btn btn--primary" type="submit">Upload
-                        Product</button>
-                </form>
             </div>
         </div>
     </section>
