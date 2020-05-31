@@ -288,7 +288,7 @@ Quantity|quantity|blank=False|IntegerField
 
 #### Feature Testing 🎡: 
 
-<strong>Feature - Contact Form (using Sendgrid Api)</strong>
+<strong>Contact Form (using Sendgrid Api)</strong>
 - <strong>Plan</strong> 📝: 
 I wanted to create a contact form in which users on the website could send messages to the business, I have previously built contact forms which just provide the user with a dummy message to say that the message has been recieved, here however I wanted to take advantage of the excellent service Sendgrid provides and actually allow my users to send messages to an inbox.
 
@@ -377,6 +377,22 @@ To test the checkout feature, I first needed to add a selection of products to t
 
 - <strong>Result</strong> 🏆: 
 The payment was processed and using the stripe dashboard I could see that stripe had processed a dummy payment for the products that were in the cart.
+
+- <strong>Verdict</strong> ✅: 
+This test passed based on the above criteria and information.
+
+<strong>'Latest Products' Carousel</strong>
+- <strong>Plan</strong> 📝: 
+As an added extra for the website I wanted to construct a sliding 'latest-products' carousel using the slick.js library, whilst this isnt actually displaying the 'latest-products' it is showing a list of products in a 'quick-look' fashion as an added extra to use across the website. Being familiar with the slick.js library this wasn't going to be that much of a challenge.
+
+- <strong>Implementation</strong> 🏭: 
+To implement this feature I had to make sure that the products from the database were available within the view where I wanted to render the carousel, I setup the slick.js file and included the code for the carousel, making sure to vary the amount of products shown on different device types.
+
+- <strong>Test</strong> 🧪: 
+To test this feature I navigated to the home page, (one of the places where this feature is rendered), and looked to see if the products were rendered with the settings specified in the slick.js file.
+
+- <strong>Result</strong> 🏆: 
+The products were rendered in a sliding carousel with the settings specified in the slick.js file.
 
 - <strong>Verdict</strong> ✅: 
 This test passed based on the above criteria and information.
