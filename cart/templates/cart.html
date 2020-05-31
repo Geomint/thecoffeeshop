@@ -29,11 +29,11 @@
         <div class="col-12">
             <div class="cart__adjust">
                 <h5>In the cart: {{ p.quantity }}</h5>
-                <form method="POST" class="cart__item__update-form" action="{% url 'adjustcart' p.id %}">
+                <form id="edit-qty-form" method="POST" class="cart__item__update-form" action="{% url 'adjustcart' p.id %}">
                     {% csrf_token %}
                     <div class="cart__item__update-form__group">
                         <input name="quantity" type="number" min="0" max="999" value="{{p.quantity}}">
-                        <button class="btn btn--primary" type="submit">Edit Quantity</button>
+                        <button id="edit-qty" class="btn btn--primary" type="submit">Edit Quantity</button>
                     </div>
                 </form>
             </div>
@@ -52,7 +52,7 @@
             <div class="cart__total">
                 <h4>Your Cart Total:</h4>
                 <p class="cart__total__value">£{{ total }}</p>
-                <a class="btn btn--primary" href="{% url 'checkout' %}">Checkout</a>
+                <a id="checkout-button" class="btn btn--primary" href="{% url 'checkout' %}">Checkout</a>
             </div>
         </div>
     </section>
