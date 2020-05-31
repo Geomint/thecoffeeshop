@@ -20,7 +20,7 @@
                 {% for product in products %}
                 <div class="home__latest-products__slick__slide">
                     <a href="{% url 'view_product_detail' product.id %}">
-                        <img class="img-responsive" src="/static/{{product.image}}" alt="{{product.name}}">
+                        <img class="img-responsive" src="/{{product.image}}" alt="{{product.name}}">
                         <div class="home__latest-products__slick__slide__content">
                             <p class="home__latest-products__slick__slide__content__text">{{ product.name }}</p>
                             <p class="home__latest-products__slick__slide__content__price">£{{ product.price }}
