@@ -44,3 +44,10 @@ def contact_us_view(request):
 
     page_title = 'Contact Us'
     return render(request, "contact_us.html", {'page_title': page_title, 'contact_form': contact_form})
+
+def thankyou_page_view(request):
+    """
+    Returns the thankyou.html page
+    """
+    page_title = 'Thank You Page'
+    return render(request, "thankyou.html", {'page_title': page_title})
