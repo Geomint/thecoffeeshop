@@ -316,7 +316,24 @@ Quantity|quantity|blank=False|IntegerField
 ## Deployment 🚀
 
 
-### Cloning The Coffee Shop from GitHub:
+### Running this project locally:
+
+To run The Coffee Shop locally please follow the steps below!
+
+Before starting make sure you have the following:
+
+* An IDE (interactive development environment) such as <a href="https://code.visualstudio.com/">Visual Studio Code</a>.
+* You <strong>MUST</strong> have the following installed on your machine>
+* * <a href="https://pip.pypa.io/en/stable/installing/">PIP</a>
+* * <a href="https://www.python.org/">Python3</a>
+* * <a href="https://git-scm.com/">Git</a>
+* You will <strong>need to</strong> create accounts with the following online services in order to run this project.
+* * <a href="https://sendgrid.com/">Sendgrid</a>
+* * <a href="https://stripe.com/">Stripe</a>
+
+## Instructions:
+
+<em>WARNING: You may need to follow a different guide based on the OS you are using, read more here.</em>
 
 ### Deploying The Coffee Shop to Heroku:
 
