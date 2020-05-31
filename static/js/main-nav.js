@@ -1,7 +1,12 @@
 // main-nav js goes here
-
 const searchButton = $('#search-button');
 const overlay = $('#overlay')
+const readMore = $("#read-more");
+const readLess = $("#read-less");
+const descriptionTwo = $("#more-description");
+const speed = 200;
+const orderForm = $("#payment-form");
+const orderPay = $("#pay");
 
 searchButton.on('click', function () {
     $('.search').removeClass('search__hide');
@@ -19,11 +24,6 @@ overlay.on('click', function () {
     $('html').removeClass('open-nav');
 });
 
-const readMore = $("#read-more");
-const readLess = $("#read-less");
-const descriptionTwo = $("#more-description");
-const speed = 200;
-
 readMore.on('click', function () {
     descriptionTwo.show(speed);
     readMore.hide(speed);
@@ -35,9 +35,6 @@ readLess.on('click', function () {
     readMore.show(speed);
     return false;
 });
-
-const orderForm = $("#payment-form");
-const orderPay = $("#pay");
 
 orderPay.on('click', function (){
     orderForm.submit();
