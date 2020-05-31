@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %} The Coffee Shop | {{page_title}} {% endblock %}
+{% block content %}
+<div class="container">
+    <section class="row">
+        <div class="col-sm-12">
+            <div class="no-results">
+                <h1 class="no-results__title">No products were found!</h1>
+                <p class="no-results__message">For the search term: "{{search_query}}"</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="row home__layout">
+        <div class="col-md-12">
+            <h2 class="home__latest-products__title">However, you may like these...</h2>
+        </div>
+        <div class="col-12">
+            <div class="home__latest-products__slick">
+                {% for product in products %}
+                <div class="home__latest-products__slick__slide">
+                    <a href="{% url 'view_product_detail' product.id %}">
+                        <img class="img-responsive" src="/static/{{product.image}}" alt="{{product.name}}">
+                        <div class="home__latest-products__slick__slide__content">
+                            <p class="home__latest-products__slick__slide__content__text">{{ product.name }}</p>
+                            <p class="home__latest-products__slick__slide__content__price">£{{ product.price }}
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </section>
+</div>
+{% endblock %}
