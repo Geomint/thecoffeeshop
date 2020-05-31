@@ -450,11 +450,13 @@ This test passed based on the above criteria and information.
 
 #### Bugs During Development: 
 
-- <strong>Bug</strong> 🐞:
- 
-- <strong>Fix</strong> 🔧: 
+<p>Stripe Integration</p>
 
-- <strong>Verdict</strong> ✅: 
+- <strong>Bug</strong> 🐞: During development of the stripe integration I had ran into an issue in which I could not get the website to process the order using a test card, in debugging mode I was being told that the 'stripe_id' is required to perform a purchase.
+ 
+- <strong>Fix</strong> 🔧: The fix for this bug was irritatingly simple, because the Stripe JS code relies on the jQuery library I had to reorder the order in which I import the scripts in scripts.html so that jQuery was rendered before the stripe.js file.
+
+- <strong>Verdict</strong> ✅: The bug was squashed and orders could now be processed!
 
 
 ## Deployment 🚀
