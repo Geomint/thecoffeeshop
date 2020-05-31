@@ -176,6 +176,13 @@ $default-border-radius: 6px;
 
 ### Database Design:
 
+* During development of The Coffee Shop I worked with the standard <strong>sqlite3</strong> database that comes installed with Django.
+* In the production version of The Coffee Shop, the database is a <strong>PostgreSQL</strong> database, hosted and provided by Heroku.
+
+### The Coffee Shop Data Models:
+
+The user model used in this project is that which is provided by Django, click <a href="https://docs.djangoproject.com/en/3.0/ref/contrib/auth/">here</a> to read more about those tables.
+
 ## Features: 🎡
 
 ### Features that have been developed:
