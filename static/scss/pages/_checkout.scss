@@ -2,6 +2,15 @@
 
 .checkout {
 
+    &__errors {
+        background: $error-color;
+        text-align: center;
+        padding: 20px 10px;
+        color: $white-color;
+        border-radius: $default-border-radius;
+        box-shadow: $panel-shadow;
+    }
+
     &__header {
         text-align: center;
         padding-bottom: 10px;
