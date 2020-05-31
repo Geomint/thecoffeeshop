@@ -9,4 +9,10 @@
             width: 20%;
         }
     }
+
+    &__message {
+        a {
+            color: $text-on-white-color;
+        }
+    }
 }
