@@ -12,19 +12,19 @@
                     </form>
                 </div>
                 <ul class="mobile-nav__panel__list">
-                    <li class="mobile-nav__panel__list__item"><a href="{% url 'home' %}"><i class="fas fa-home"></i>Home</a></li>
-                    <li class="mobile-nav__panel__list__item"><a href="/products"><i class="fas fa-shopping-basket"></i>Shop</a>
+                    <li class="mobile-nav__panel__list__item"><a aria-label="home" href="{% url 'home' %}"><i class="fas fa-home"></i>Home</a></li>
+                    <li class="mobile-nav__panel__list__item"><a aria-label="shop" href="/products"><i class="fas fa-shopping-basket"></i>Shop</a>
                     </li>
-                    <li class="mobile-nav__panel__list__item"><a href="{% url 'about' %}"><i class="fas fa-question-circle"></i>About
+                    <li class="mobile-nav__panel__list__item"><a aria-label="about" href="{% url 'about' %}"><i class="fas fa-question-circle"></i>About
                             Us</a></li>
-                    <li class="mobile-nav__panel__list__item"><a href="{% url 'contact' %}"><i class="fas fa-phone"></i>Contact Us</a>
+                    <li class="mobile-nav__panel__list__item"><a aria-label="contact" href="{% url 'contact' %}"><i class="fas fa-phone"></i>Contact Us</a>
                     </li>
                     {% if user.is_authenticated %}
-                    <li class="mobile-nav__panel__list__item"><a href="{% url 'profile' %}"><i class="fas fa-user"></i>Profile</a></li>
-                    <li class="mobile-nav__panel__list__item"><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Sign Out</a></li>
+                    <li class="mobile-nav__panel__list__item"><a aria-label="profile" href="{% url 'profile' %}"><i class="fas fa-user"></i>Profile</a></li>
+                    <li class="mobile-nav__panel__list__item"><a aria-label="sign out" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>Sign Out</a></li>
                     {%  else %}
-                    <li class="mobile-nav__panel__list__item"><a href="{% url 'register' %}"><i class="fas fa-user"></i>Register</a></li>
-                    <li class="mobile-nav__panel__list__item"><a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i>Sign In</a></li>
+                    <li class="mobile-nav__panel__list__item"><a aria-label="register" href="{% url 'register' %}"><i class="fas fa-user"></i>Register</a></li>
+                    <li class="mobile-nav__panel__list__item"><a aria-label="sign in" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i>Sign In</a></li>
                     {% endif %}
                 </ul>
             </div>
