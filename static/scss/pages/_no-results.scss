@@ -1,0 +1,9 @@
+// styles for no-results page
+
+.no-results {
+    text-align: center;
+    
+    &__message {
+        font-size: 1.5rem;
+    }
+}
