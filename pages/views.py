@@ -45,9 +45,23 @@ def contact_us_view(request):
     page_title = 'Contact Us'
     return render(request, "contact_us.html", {'page_title': page_title, 'contact_form': contact_form})
 
+
 def thankyou_page_view(request):
     """
     Returns the thankyou.html page
     """
     page_title = 'Thank You Page'
     return render(request, "thankyou.html", {'page_title': page_title})
+
+
+def error_500_view(request, *args, **argv):
+    response = render_to_response(
+        '500.html', {}, context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
+
+def error_404_view(request, *args, **argv):
+    response = render_to_response(
+        '404.html', {}, context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
