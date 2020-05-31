@@ -4,7 +4,6 @@ const addToCartButton = $('#add-to-cart');
 const cartForm = $('#cart-form');
 const editCartQtyButton = $('#edit-qty');
 const editCartQtyForm = $('#edit-qty-form');
-const checkoutButton = $('#checkout-button')
 
 addToCartButton.click(function (e) {
     e.preventDefault();
@@ -36,4 +35,4 @@ editCartQtyButton.click(function (e) {
                 })
             }
         });
-})
+});
