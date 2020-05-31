@@ -11,7 +11,7 @@
                 <div class="products__wrapper">
                     <a class="products__main-link" href="{% url 'view_product_detail' product.id %}">
                         <div class="products__wrapper__image">
-                            <img class="img-responsive" src="/static/{{product.image}}" alt="{{product.name}}">
+                            <img class="img-responsive" src="/{{product.image}}" alt="{{product.name}}">
                         </div>
                         <h3 class="products__wrapper__title">{{product.name}}</h3>
                     </a>
