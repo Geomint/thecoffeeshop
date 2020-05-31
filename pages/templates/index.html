@@ -22,7 +22,7 @@
     <div class="strip-banner">
         <div class="strip-banner__content">
             <h3>Browse our Coffee Shop and find the perfect blend for you.</h3>
-            <a class="btn btn--primary" href="/products">Shop Now</a>
+            <a aria-label="Shop Now" class="btn btn--primary" href="/products">Shop Now</a>
         </div>
     </div>
 
@@ -85,7 +85,7 @@
                 <div class="home__latest-products__slick">
                     {% for product in products %}
                     <div class="home__latest-products__slick__slide">
-                        <a href="{% url 'view_product_detail' product.id %}">
+                        <a aria-label="View Product Detail" href="{% url 'view_product_detail' product.id %}">
                             <img class="img-responsive" src="/{{product.image}}" alt="{{product.name}}">
                             <div class="home__latest-products__slick__slide__content">
                                 <p class="home__latest-products__slick__slide__content__text">{{ product.name }}</p>
@@ -101,33 +101,10 @@
         </section>
     </div>
 
-    <!-- <div class="container">
-        <section class="row">
-            <div class="col-md-4 col-12">
-                <div class="home__promo">
-                    <p class="home__promo__text">We provide only the finest quality coffee</p>
-                    <a class="btn btn--secondary" href="/">Read More</a>
-                </div>
-            </div>
-            <div class="col-md-4 col-12">
-                <div class="home__promo">
-                    <p class="home__promo__text">We provide only the finest quality coffee</p>
-                    <a class="btn btn--secondary" href="/">Read More</a>
-                </div>
-            </div>
-            <div class="col-md-4 col-12">
-                <div class="home__promo">
-                    <p class="home__promo__text">We provide only the finest quality coffee</p>
-                    <a class="btn btn--secondary" href="/">Read More</a>
-                </div>
-            </div>
-        </section>
-    </div> -->
-
     <div class="strip-banner">
         <div class="strip-banner__content">
             <h3>Still unsure about what coffee to purchase?</h3>
-            <a class="btn btn--primary" href="{% url 'contact' %}">Get In Touch</a>
+            <a aria-label="Get In Touch" class="btn btn--primary" href="{% url 'contact' %}">Get In Touch</a>
         </div>
     </div>
 
