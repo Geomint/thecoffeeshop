@@ -229,7 +229,18 @@ Quantity|quantity|blank=False|IntegerField
 
 ### Features that have been developed:
 
+* <p>Sliding latest products carousel that allows users to have a quick look at the list of products available to purchase.</p>
+* <p>Account creation, user can login and view orders on profile dashboard.</p>
+* <p>User can update their details further from the profile dashboard.</p>
+* <p>A search bar that returns a list of products based on the users search query.</p>
+* <p>A product list and product detail page so the user can click on individual products and find out more if they so wish.</p>
+* <p>An active shopping cart that users can add or remove items from and also update the quantities inside.</p>
+* <p>Users can take the cart full of items and checkout using the Stripe API which will process the payment details and place an order.</p>
+* <p>Users can send a message via the contact form on the contact page, this utilises the sendgrid API to send the messages via email.</p>
+
 ### Features that will be developed in the future:
+
+
 
 ## Technologies Used: 👨‍💻
 #### Languages:
