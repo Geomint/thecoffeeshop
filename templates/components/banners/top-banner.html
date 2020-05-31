@@ -5,11 +5,11 @@
                 <h2>The Coffee Shop</h2>
                 <p>Welcome to The Coffee Shop</p>
                 <div class="top-banner__wrapper__image__content__buttons">
-                    <a class="btn btn--primary" href="/products">Shop Coffee</a>
+                    <a aria-label="shop" class="btn btn--primary" href="/products">Shop Coffee</a>
                     {% if user.is_authenticated %}
-                    <a class="xs-hide btn btn--no-inner" href="{% url 'profile' %}">My Profile</a>
+                    <a caria-label="profile" lass="xs-hide btn btn--no-inner" href="{% url 'profile' %}">My Profile</a>
                     {% else %}
-                    <a class="xs-hide btn btn--no-inner" href="{% url 'login' %}">Sign In</a>
+                    <a aria-label="sign in" class="xs-hide btn btn--no-inner" href="{% url 'login' %}">Sign In</a>
                     {% endif %}
                 </div>
             </div>
