@@ -397,6 +397,22 @@ The products were rendered in a sliding carousel with the settings specified in 
 - <strong>Verdict</strong> ✅: 
 This test passed based on the above criteria and information.
 
+<strong>Profile Dashboard (orders & edit account information)</strong>
+- <strong>Plan</strong> 📝: 
+I wanted to develop a profile dashboard in which a user could access information about the items they had purchased, and the orders they had made. Also this would be the place in which the user could edit information about themselves.
+
+- <strong>Implementation</strong> 🏭: 
+To implement this feature I had to interact with the Order and OrderItem model in the checkout app, looping through each order in the database and pulling out the orders that match the current logged in users id, then within the template looping over each order.item to render the order in the dashboard. In terms of editing the user details, I had to create a form that would update the user details in the User table based on the information inputted.
+
+- <strong>Test</strong> 🧪: 
+To test the orders section of the profile dashboard, I first had to place a dummy order through the website so that there was information stored in the database to render in the HTML. I then navigated to the orders section in the dashboard. To test editing the user information I filled in the form with a new 'Name' and 'Surname' on the account information section and hit the edit details button.
+
+- <strong>Result</strong> 🏆: 
+When I navigated to the orders section, I could see that the order I had previously placed was rendered with all the relevant information, to check that this was only viewable by my account, I created a test account to check to see if the order was visible and it wasnt. Upon submitting the user details form, I checked the details rendered in the HTML and could see that the values in the database had been updated.
+
+- <strong>Verdict</strong> ✅: 
+This test passed based on the above criteria and information.
+
 
 ## Bugs 🐞
 
