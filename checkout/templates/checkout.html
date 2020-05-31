@@ -72,29 +72,32 @@
             </div>
         </div>
         <div class="col-md-4">
-            <h3 class="checkout__header">Order Summary</h3>
-            {% for item in cart_items %}
-            <section class="row checkout__row">
-                <div class="col-5">
-                    <img class="img-responsive" src="/static/{{item.product.image}}" alt="{{item.product.name}}">
-                </div>
-                <div class="col-7 align align--center">
-                    <div class="checkout__summary">
-                        <p class="checkout__summary__title">{{item.product.name}}</p>
-                        <p class="checkout__summary__price">£{{item.product.price}}</p>
-                        <p class="checkout__sumamary__quantity">Qty: {{item.quantity}}</p>
+            <div class="sticky-top">
+                <h3 class="checkout__header">Order Summary</h3>
+                {% for item in cart_items %}
+                <section class="row checkout__row">
+                    <div class="col-5">
+                        <img class="img-responsive" src="/static/{{item.product.image}}" alt="{{item.product.name}}">
                     </div>
-                </div>
-            </section>
-            {% endfor %}
-            <section class="row checkout__row">
-                <div class="col-12">
-                    <div class="checkout__total">
-                        <p>Order Total: {{ total }}</p>
-                        <a class="btn btn--primary" id="pay" href="#">Make Payment</a>
+                    <div class="col-7 align align--center">
+                        <div class="checkout__summary">
+                            <p class="checkout__summary__title">{{item.product.name}}</p>
+                            <p class="checkout__summary__price">£{{item.product.price}}</p>
+                            <p class="checkout__sumamary__quantity">Qty: {{item.quantity}}</p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+                {% endfor %}
+                <section class="row checkout__row">
+                    <div class="col-12">
+                        <div class="checkout__total">
+                            <p>Order Total: {{ total }}</p>
+                            <a class="btn btn--primary" id="pay" href="#">Make Payment</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+         
         </div>
     </section>
 </div>
