@@ -183,6 +183,22 @@ $default-border-radius: 6px;
 
 The user model used in this project is that which is provided by Django, click <a href="https://docs.djangoproject.com/en/3.0/ref/contrib/auth/">here</a> to read more about those tables.
 
+#### The Product Model:
+
+The product model within the product app holds the following data for the products in The Coffee Shop.
+
+**Name**|**Key in db**|**Validation**|**Field Type**
+:-----:|:-----:|:-----:|:-----:
+Name|name|max\_length=254, default=''"|CharField
+Grind Size|grind\_size|max\_length=20, choices=GRIND\_OPTIONS, default=FINE,|CharField
+Excerpt|excerpt|max\_length=30, default='some string'|TextField
+Description|description|default='some string'|TextField
+Description2|description2|default='some string'|TextField
+Promoted|promoted|default=False|BooleanField
+Image|image|upload\_to="static/images"|ImageField
+Price|price|max\_digits=6, decimal\_places=2|DecimalField
+RRP|recommended\_retail\_price|max\_digits=6, decimal\_places=2, default=0.0|DecimalField
+
 ## Features: 🎡
 
 ### Features that have been developed:
