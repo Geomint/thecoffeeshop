@@ -10,13 +10,7 @@
 
     <section class="row">
         <div class="col-12">
-            {% if messages %}
-            {% for message in messages %}
-            <div class="alert">
-                <p>{{ message }}</p>
-            </div>
-            {% endfor %}
-            {% endif %}
+            {% include 'components/message.html' %}
         </div>
     </section>
 
