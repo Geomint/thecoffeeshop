@@ -282,11 +282,38 @@ Quantity|quantity|blank=False|IntegerField
 
 #### Planning: 
 
-#### Testing: 
+<p>Planning for this project was extremely important, using and utilising new technology, frameworks, APIs and other tools can often be a challenge if you lack the correct preperation, continue reading to find out how each feature of The Coffee Shop was planned, tested, and how the feature works within the scope of the website.</p>
+
+<p>Using the wireframes I built using sketch I was able to quickly build a base layout for the website, utilising component files where possible in order to provide resuable code in multiple areas across the website, thanks to the templating language that comes as standard with Django, this was an easy task.</p>
 
 #### Feature Testing 🎡: 
 
-<strong>Feature -</strong>
+<strong>Feature - Contact Form (using Sendgrid Api)</strong>
+- <strong>Plan</strong> 📝: 
+I wanted to create a contact form in which users on the website could send messages to the business, I have previously built contact forms which just provide the user with a dummy message to say that the message has been recieved, here however I wanted to take advantage of the excellent service Sendgrid provides and actually allow my users to send messages to an inbox.
+
+- <strong>Implementation</strong> 🏭: 
+Using the documentation provided by Django and Sendgrid, setting up the contact form was relatively simple, adding the following settings to my 'settings.py' 
+```python
+SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
+EMAIL_HOST = '<sendgrid_host_here>'
+EMAIL_HOST_USER = 'apikey'  # this is exactly the value 'apikey'
+EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+EMAIL_PORT = <ports_here>
+EMAIL_USE_TLS = True
+``` 
+in order to access the sendgrid API. From within the dashboard of sendgrid I had to set up a verified sender in order to allow messages to be sent in from the form. There are 3 cname records that need to be set at the Domain level in order to allow any sender email to be inputted into the contact form, this exceeded the scope of the requirements for the project as I dont have access to a domain for TheCoffeeShop, just what heroku provided, therefore the only sender email currently available to use on the contact form is "george.pyott@googlemail.com".
+
+- <strong>Test</strong> 🧪: 
+To test this feature I had to ensure that the above settings were correct in the settings.py file, and input a dummy message into the contact form making sure that the email is 'george.pyott@googlemail.com'.
+
+- <strong>Result</strong> 🏆: 
+Using the dashboard that SendGrid provides, I could see that the email had been sent using their services, and within the inbox specified I could see the message sent from the contact form within The Coffee Shop.
+
+- <strong>Verdict</strong> ✅: 
+Whilst this feature works in the scope of the project criteria, In the future if The Coffee Shop were deployed to a none Heroku domain, I would add the necessary records to the DNS so that any email could be used as a registered sender.
+
+<strong></strong>
 - <strong>Plan</strong> 📝: 
 
 - <strong>Implementation</strong> 🏭: 
@@ -301,10 +328,6 @@ Quantity|quantity|blank=False|IntegerField
 ## Bugs 🐞
 
 #### Bugs During Development: 
-
-
-
-<p>Case Sensitive Confusion:</p>
 
 - <strong>Bug</strong> 🐞:
  
