@@ -44,7 +44,7 @@
     <section class="row">
         <div class="col-md-6 align align--center">
             <div class="cart__extras">
-                <p>Are you missing some items? make sure to double check <a href="/">in the shop</a> before placing your
+                <p>Are you missing some items? make sure to double check <a aria-label="Shop" href="/products">in the shop</a> before placing your
                     order!</p>
             </div>
         </div>
@@ -52,7 +52,7 @@
             <div class="cart__total">
                 <h4>Your Cart Total:</h4>
                 <p class="cart__total__value">£{{ total }}</p>
-                <a id="checkout-button" class="btn btn--primary" href="{% url 'checkout' %}">Checkout</a>
+                <a aria-label="Checkout" id="checkout-button" class="btn btn--primary" href="{% url 'checkout' %}">Checkout</a>
             </div>
         </div>
     </section>
@@ -62,7 +62,7 @@
             <div class="cart__empty">
                 <h3>Your cart is empty!</h3>
                 <p>Browse our extensive range of coffee products in our online shop!</p>
-                <a class="btn btn--primary" href="/products">Continue Shopping</a>
+                <a aria-label="Continue Shopping" class="btn btn--primary" href="/products">Continue Shopping</a>
             </div>
         </div>
     </section>
