@@ -101,7 +101,7 @@ and using secure payment gateways (in this case Stripe) is necessary to offer th
 
 ### Icons:
 
-<p>Thanks to the excellent collection of icons over at font-awesome, selecting icons to use for The Coffee Shop was really simple, I decided to go with typical icons for the 'icon-navigation' section of the navbar, the cart, the user icon and the burger button, as well as using various other intutitive icons across the project. I use icons in place of link text across the site where possible to provide the best UX possible to the user.</p>
+<p>Thanks to the excellent collection of icons over at font-awesome, selecting icons to use for The Coffee Shop ☕️ was really simple, I decided to go with typical icons for the 'icon-navigation' section of the navbar, the cart, the user icon and the burger button, as well as using various other intutitive icons across the project. I use icons in place of link text across the site where possible to provide the best UX possible to the user.</p>
 
 ### Colours:
 <p>The colours I chose to use for this website compliment the rustic tones of a coffee shop, having a visually appealing contrast provides a more elegant user experience for those on the website, below is the list of colours the website uses.</p>
@@ -166,7 +166,7 @@ $default-border-radius: 6px;
 <p>The images used across the website have been sourced from royalty free image website such as <a href="https://unsplash.com/">this</a>. The images are related to coffee in some way be it baristas, coffee displays or even ground coffee. This helps to provide lifestyle imagery to the user and potentially entice them into making a purchase.</p>
 
 ## Wireframes/Flowcharts: 🔧
-<p>I used <a href="https://www.sketch.com/">Sketch</a> to develop the wireframes for The Coffee Shop website, this seemless tool allowed me to easily make a wireframe for each page aswell as a wireframe for each device. I could then easily export them via the tool to .png files in order to save to the project.</p> 
+<p>I used <a href="https://www.sketch.com/">Sketch</a> to develop the wireframes for The Coffee Shop ☕️ website, this seemless tool allowed me to easily make a wireframe for each page aswell as a wireframe for each device. I could then easily export them via the tool to .png files in order to save to the project.</p> 
 
 <p>The wireframes for this project can be seen <a href="https://github.com/Geomint/thecofffeeshop/tree/master/wireframes">here</a></p>
 
@@ -176,16 +176,16 @@ $default-border-radius: 6px;
 
 ### Database Design:
 
-* During development of The Coffee Shop I worked with the standard <strong>sqlite3</strong> database that comes installed with Django.
-* In the production version of The Coffee Shop, the database is a <strong>PostgreSQL</strong> database, hosted and provided by Heroku.
+* During development of The Coffee Shop ☕️ I worked with the standard <strong>sqlite3</strong> database that comes installed with Django.
+* In the production version of The Coffee Shop ☕️, the database is a <strong>PostgreSQL</strong> database, hosted and provided by Heroku.
 
-### The Coffee Shop Data Models:
+### The Coffee Shop ☕️ Data Models:
 
 The user model used in this project is that which is provided by Django, click <a href="https://docs.djangoproject.com/en/3.0/ref/contrib/auth/">here</a> to read more about those tables.
 
 #### The Product Model:
 
-The product model within the product app holds the following data for the products in The Coffee Shop.
+The product model within the product app holds the following data for the products in The Coffee Shop ☕️.
 
 **Name**|**Key in db**|**Validation**|**Field Type**
 :-----:|:-----:|:-----:|:-----:
@@ -201,7 +201,7 @@ RRP|recommended\_retail\_price|max\_digits=6, decimal\_places=2, default=0.0|Dec
 
 #### The Order Model:
 
-The Order model within the checkout app holds the following data for the orders in The Coffee Shop.
+The Order model within the checkout app holds the following data for the orders in The Coffee Shop ☕️.
 
 **Name**|**Key in db**|**Validation**|**Field Type**
 :-----:|:-----:|:-----:|:-----:
@@ -217,7 +217,7 @@ Date|date| |DateField
 
 #### The OrderItem Model:
 
-The OrderItem model within the checkout app holds the following data for the OrderItem(s) in The Coffee Shop.
+The OrderItem model within the checkout app holds the following data for the OrderItem(s) in The Coffee Shop ☕️.
 
 **Name**|**Key in db**|**Validation**|**Field Type**
 :-----:|:-----:|:-----:|:-----:
@@ -240,9 +240,9 @@ Quantity|quantity|blank=False|IntegerField
 
 ### Features that will be developed in the future:
 
-* <p>A reset password link that will send the user a link to reset their password for The Coffee Shop.</p>
+* <p>A reset password link that will send the user a link to reset their password for The Coffee Shop ☕️.</p>
 * <p>Products will be filterable by a selection of the properties in the model, e.g grind size or price.</p>
-* <p>Full integration of the sendgrid API: there are cname records which need to be set at domain level in order to fully utilise this API, however this was beyond the scope of the requried criteria as I do not have a physical domain for The Coffee Shop, just that which Heroku provides. Read more about the sendgrid integration in the planning & testing section below.</p>
+* <p>Full integration of the sendgrid API: there are cname records which need to be set at domain level in order to fully utilise this API, however this was beyond the scope of the requried criteria as I do not have a physical domain for The Coffee Shop ☕️, just that which Heroku provides. Read more about the sendgrid integration in the planning & testing section below.</p>
 * <p>Order confirmation emails to be sent to the customer upon placing an order.</p>
 * <p>A promoted section where the users can see all of the products that are flagged as 'promoted' in the database.</p>
 
@@ -282,7 +282,7 @@ Quantity|quantity|blank=False|IntegerField
 
 #### Planning: 
 
-<p>Planning for this project was extremely important, using and utilising new technology, frameworks, APIs and other tools can often be a challenge if you lack the correct preperation, continue reading to find out how each feature of The Coffee Shop was planned, tested, and how the feature works within the scope of the website.</p>
+<p>Planning for this project was extremely important, using and utilising new technology, frameworks, APIs and other tools can often be a challenge if you lack the correct preperation, continue reading to find out how each feature of The Coffee Shop ☕️ was planned, tested, and how the feature works within the scope of the website.</p>
 
 <p>Using the wireframes I built using sketch I was able to quickly build a base layout for the website, utilising component files where possible in order to provide resuable code in multiple areas across the website, thanks to the templating language that comes as standard with Django, this was an easy task.</p>
 
@@ -308,10 +308,10 @@ EMAIL_USE_TLS = True
 To test this feature I had to ensure that the above settings were correct in the settings.py file, and input a dummy message into the contact form making sure that the email is 'george.pyott@googlemail.com'.
 
 - <strong>Result</strong> 🏆: 
-Using the dashboard that SendGrid provides, I could see that the email had been sent using their services, and within the inbox specified I could see the message sent from the contact form within The Coffee Shop.
+Using the dashboard that SendGrid provides, I could see that the email had been sent using their services, and within the inbox specified I could see the message sent from the contact form within The Coffee Shop ☕️.
 
 - <strong>Verdict</strong> ✅: 
-Whilst this feature works in the scope of the project criteria, In the future if The Coffee Shop were deployed to a none Heroku domain, I would add the necessary records to the DNS so that any email could be used as a registered sender.
+Whilst this feature works in the scope of the project criteria, In the future if The Coffee Shop ☕️ were deployed to a none Heroku domain, I would add the necessary records to the DNS so that any email could be used as a registered sender.
 
 <strong>Product List Page</strong>
 - <strong>Plan</strong> 📝: 
@@ -464,7 +464,7 @@ This test passed based on the above criteria and information.
 
 ### Running this project locally:
 
-To run The Coffee Shop locally please follow the steps below!
+To run The Coffee Shop ☕️ locally please follow the steps below!
 
 Before starting make sure you have the following:
 
@@ -535,9 +535,9 @@ python3 manage.py createsuperuser
 python3 manage.py runserver
 ```
 
-Congratulations, The Coffee Shop is now running locally on your machine! Happy Coding!
+Congratulations, The Coffee Shop ☕️ is now running locally on your machine! Happy Coding!
 
-### Deploying The Coffee Shop to Heroku:
+### Deploying The Coffee Shop ☕️ to Heroku:
 
 * 1: <strong>Create</strong> a requirements.txt file using the following command.
 ```bash
@@ -564,7 +564,7 @@ STRIPE\_SECRET|<your\_stripe\_secret\_key>
 * 7: <strong>Click</strong> the deploy button on the heroku Dashboard.
 * 8: Wait for the build to finish and click the view project link once it has!
 
-Congratulations, The Coffee Shop is now hosted on Heroku and is live!
+Congratulations, The Coffee Shop ☕️ is now hosted on Heroku and is live!
 
 ## Credits 💳
 
