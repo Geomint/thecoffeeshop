@@ -346,6 +346,26 @@ The page rendered accuratley with the previously clicked product information, I 
 This test passed based on the above criteria and information.
 
 
+<strong>Cart (add-to, edit-cart, view-cart)</strong>
+- <strong>Plan</strong> 📝: 
+You can't have an e-commerce website without a functioning shopping cart, therefore planning and testing for this feature was important. I wanted to cart to be available to any user, not just those signed in as in business terms this would mean that there is a higher chance people would buy items due to not having to enter contact details to browse, also gathering session information is an important part of e-commerce research.
+
+- <strong>Implementation</strong> 🏭: 
+I had to build a context.py file within the cart app and include this within the context processors section within templates in the settings.py file, this is to tell the app what the cart should look like by default and what information should be available to it. This is also required as the cart is not stored in the database, but rather in the session. Once this was done, I could write the view function for Adding to the cart, Editing the quantity in the cart, and Viewing the cart contents.
+
+- <strong>Test</strong> 🧪: 
+To test these cart features I had to do the following:
+* 1: Navigate to the product list page and click through to a product detail view page, then I attempted to add 2 of the item to the cart.
+* 2: Wait to see if the returned page was the cart.html page with 2 lots of the product I had just added.
+* 3: Edit the quantity of the items in the cart to 1 and update the cart.
+
+- <strong>Result</strong> 🏆: 
+The website correctly added 2 of the clicked products to the cart session, and the cart.html page was rendered with those items in. Upon editing the quantity of the item to 1 and hitting submit, the cart page was reloaded with just 1 of the item not remaining in the cart.
+
+- <strong>Verdict</strong> ✅: 
+This test passed based on the above criteria and information.
+
+
 ## Bugs 🐞
 
 #### Bugs During Development: 
