@@ -240,7 +240,11 @@ Quantity|quantity|blank=False|IntegerField
 
 ### Features that will be developed in the future:
 
-
+* <p>A reset password link that will send the user a link to reset their password for The Coffee Shop.</p>
+* <p>Products will be filterable by a selection of the properties in the model, e.g grind size or price.</p>
+* <p>Full integration of the sendgrid API: there are cname records which need to be set at domain level in order to fully utilise this API, however this was beyond the scope of the requried criteria as I do not have a physical domain for The Coffee Shop, just that which Heroku provides. Read more about the sendgrid integration in the planning & testing section below.</p>
+* <p>Order confirmation emails to be sent to the customer upon placing an order.</p>
+* <p>A promoted section where the users can see all of the products that are flagged as 'promoted' in the database.</p>
 
 ## Technologies Used: 👨‍💻
 #### Languages:
