@@ -215,6 +215,16 @@ Address Line 1|address\_line\_1|max\_length=40, blank=False|CharField
 Address Line 2|address\_line\_2|max\_length=40, blank=False|CharField
 Date|date| |DateField
 
+#### The OrderItem Model:
+
+The OrderItem model within the checkout app holds the following data for the OrderItem(s) in The Coffee Shop.
+
+**Name**|**Key in db**|**Validation**|**Field Type**
+:-----:|:-----:|:-----:|:-----:
+Order|order|Order, null=False|ForeignKey
+Product|product|Product, null=False|ForeignKey
+Quantity|quantity|blank=False|IntegerField
+
 ## Features: 🎡
 
 ### Features that have been developed:
