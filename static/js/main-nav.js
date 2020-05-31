@@ -38,4 +38,5 @@ readLess.on('click', function () {
 
 orderPay.on('click', function (){
     orderForm.submit();
+    return false;
 })
