@@ -1,4 +1,4 @@
-// account navigation
+// account navigation js goes here 
 const accountNavButton = $('.profile__navigation__link__account');
 const orderNavButton = $('.profile__navigation__link__orders');
 const productNavButton = $('.profile__navigation__link__product-upload');
