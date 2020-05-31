@@ -7,6 +7,9 @@ from django.contrib.auth.models import User
 
 
 class Order(models.Model):
+    """
+    This is the order model to create an order instance in the database
+    """
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     full_name = models.CharField(max_length=50, blank=False)
     phone_number = models.CharField(max_length=20, blank=False)
@@ -21,6 +24,9 @@ class Order(models.Model):
         return f'{self.id}-{self.date}-{self.user.id}'
 
 class OrderItem(models.Model):
+    """
+    This is the orderitem model to create an orderitem instance in the database
+    """
     order = models.ForeignKey(Order, null=False)
     product = models.ForeignKey(Product, null=False)
     quantity = models.IntegerField(blank=False)

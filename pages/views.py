@@ -55,12 +55,18 @@ def thankyou_page_view(request):
 
 
 def error_500_view(request, *args, **argv):
+    """
+    server error 500 handler
+    """
     response = render_to_response(
         '500.html', {}, context_instance=RequestContext(request))
     response.status_code = 500
     return response
 
 def error_404_view(request, *args, **argv):
+    """
+    server error 404 handler
+    """
     response = render_to_response(
         '404.html', {}, context_instance=RequestContext(request))
     response.status_code = 404

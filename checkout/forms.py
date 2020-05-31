@@ -20,7 +20,9 @@ class PaymentForm(forms.Form):
 
 
 class OrderForm(forms.ModelForm):
-
+    """
+    This is the order form to allow user to enter details
+    """
     address_line_2 = forms.CharField(required=False)
     phone_number = forms.IntegerField()
 
