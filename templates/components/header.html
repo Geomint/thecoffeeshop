@@ -1,31 +1,31 @@
 <!-- main nav bar -->
 <nav class="main-nav">
     <div class="main-nav__logo">
-        <a href="/">
+        <a aria-label="home" href="/">
             <img class="logo" src="/static/images/logo/logo-sm.png" alt="The Coffee Shop Logo">
         </a>
     </div>
     <div class="main-nav__nav">
         <ul class="main-nav__nav__list">
-            <li class="main-nav__nav__list__item"><a href="/">Home</a></li>
-            <li class="main-nav__nav__list__item"><a href="/products">Shop</a></li>
-            <li class="main-nav__nav__list__item"><a href="{% url 'about' %}">About Us</a></li>
-            <li class="main-nav__nav__list__item"><a href="{% url 'contact' %}">Contact Us</a></li>
+            <li class="main-nav__nav__list__item"><a aria-label="home" href="/">Home</a></li>
+            <li class="main-nav__nav__list__item"><a aria-label="shop" href="/products">Shop</a></li>
+            <li class="main-nav__nav__list__item"><a aria-label="about us" href="{% url 'about' %}">About Us</a></li>
+            <li class="main-nav__nav__list__item"><a aria-label="contact us" href="{% url 'contact' %}">Contact Us</a></li>
         </ul>
     </div>
     <div class="main-nav__icon-nav">
         <ul class="main-nav__icon-nav__list">
-            <li class="main-nav__icon-nav__list__item main-nav__icon-nav__list__item__burger-nav"><a class="nav-button"
+            <li class="main-nav__icon-nav__list__item main-nav__icon-nav__list__item__burger-nav"><a aria-label="Open Navigation" class="nav-button"
                     href="#"><i class="fas fa-bars"></i></a></li>
-            <li class="main-nav__icon-nav__list__item main-nav__icon-nav__list__item__search"><a id="search-button"
+            <li class="main-nav__icon-nav__list__item main-nav__icon-nav__list__item__search"><a aria-label="search" id="search-button"
                     href="#"><i class="fas fa-search"></i></a></li>
             {% if user.is_authenticated %}
-            <li class="main-nav__icon-nav__list__item"><a href="{% url 'profile' %}"><i class="fas fa-user"></i></a>
+            <li class="main-nav__icon-nav__list__item"><a aria-label="Profile" href="{% url 'profile' %}"><i class="fas fa-user"></i></a>
                 {% else %}
-            <li class="main-nav__icon-nav__list__item"><a href="{% url 'login' %}"><i class="far fa-user"></i></a>
+            <li class="main-nav__icon-nav__list__item"><a aria-label="sign in" href="{% url 'login' %}"><i class="far fa-user"></i></a>
                 {% endif %}
             </li>
-            <li class="main-nav__icon-nav__list__item main-nav__icon-nav__list__item__cart"><a
+            <li class="main-nav__icon-nav__list__item main-nav__icon-nav__list__item__cart"><a aria-label="cart"
                     href="{% url 'cart' %}"><i class="fas fa-shopping-basket"></i></a>
                 {% if product_total > 0 %}
                 <label class="main-nav__icon-nav__list__item__cart__counter">{{ product_total }}</label>
