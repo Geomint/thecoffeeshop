@@ -47,6 +47,21 @@
                 outline: none;
                 padding: 10px;
             }
+
+            &__inline {
+                display: inline-block;
+                width: 45%;
+
+                select {
+                    border-radius: $default-border-radius;
+                    box-shadow: $panel-shadow;
+                    border: none;
+                    outline: none;
+                    padding: 10px;
+                    height: 45px;
+                    width: 50%;
+                }
+            }
         }
 
         &__panel {
