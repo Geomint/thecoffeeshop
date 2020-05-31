@@ -52,11 +52,3 @@ class UpdateUserDetailsForm(forms.ModelForm):
         model = User
         fields = ['username', 'email', 'first_name', 'last_name']
 
-
-class UploadProductForm(forms.ModelForm):
-    """
-    Form to allow staff or admin to upload new products into DB
-    """
-    class Meta:
-        model = Product
-        fields = ['name', 'grind_size', 'description', 'image', 'price']
