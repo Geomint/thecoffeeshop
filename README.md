@@ -199,6 +199,22 @@ Image|image|upload\_to="static/images"|ImageField
 Price|price|max\_digits=6, decimal\_places=2|DecimalField
 RRP|recommended\_retail\_price|max\_digits=6, decimal\_places=2, default=0.0|DecimalField
 
+#### The Order Model:
+
+The Order model within the checkout app holds the following data for the orders in The Coffee Shop.
+
+**Name**|**Key in db**|**Validation**|**Field Type**
+:-----:|:-----:|:-----:|:-----:
+User|user|User, on\_delete=models.PROTECT|ForeignKey
+Full Name|full\_name|max\_length=50, blank=False|CharField
+Phone Number|phone\_number|max\_length=20, blank=False|CharField
+Country|country|max\_length=40, blank=False|CharField
+Postcode|postcode|max\_length=40, blank=False|CharField
+City|city|max\_length=40, blank=False|CharField
+Address Line 1|address\_line\_1|max\_length=40, blank=False|CharField
+Address Line 2|address\_line\_2|max\_length=40, blank=False|CharField
+Date|date| |DateField
+
 ## Features: 🎡
 
 ### Features that have been developed:
