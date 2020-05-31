@@ -26,11 +26,11 @@
                             class="product__content__price__rrp">£{{product.recommended_retail_price}}</span>£{{product.price}}
                     </p>
 
-                    <form method="POST" action="{% url 'addtocart' product.id %}">
+                    <form id="cart-form" method="POST" action="{% url 'addtocart' product.id %}">
                         {% csrf_token %}
                         <div class="product__content__add-to-cart">
                             <input type="number" name="quantity" value="1" min="1" max="999" placeholder="Qauntity">
-                            <button class="btn btn--primary" type="submit">Add To Cart</button>
+                            <button id="add-to-cart" class="btn btn--primary" type="submit">Add To Cart</button>
                         </div>
                     </form>
                 </div>
